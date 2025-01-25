@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-program",
+      "2": "I-program",
+      "3": "L-program",
+      "4": "U-program",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-program": 1,
+      "I-program": 2,
+      "L-program": 3,
+      "U-program": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

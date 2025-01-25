@@ -1,0 +1,72 @@
+version: "3.1"
+
+rules:
+# Core conversational rules that should always apply
+- rule: Say goodbye anytime
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Respond to bot challenge anytime
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# Fallback behavior
+- rule: Default fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+
+# - rule: Handle inquire_ccs_about
+#   steps:
+#     - intent: inquire_ccs_about
+#     - action: action_set_active_college
+#     - slot_was_set:
+#         - active_college: "ccs"
+#     - action: utter_inquire_ccs_about
+
+# - rule: Handle facilities inquiry with IIT context
+#   condition:
+#     - slot_was_set:
+#         - location: "MSU-IIT"
+#   steps:
+#     - intent: ask_about_campus_facilities
+#     - action: utter_facilities_iit
+
+# - rule: Handle facilities inquiry with specific context
+#   condition:
+#     - slot_was_set:
+#         - location: "Marawi"
+#   steps:
+#     - intent: ask_about_campus_facilities
+#     - action: utter_facilities_specific
+
+
+# Set CCS context when asked about CCS
+# - rule: Set CCS Context
+#   steps:
+#   - intent: inquire_ccs_about
+#   - action: action_set_active_college
+#   - slot_was_set:
+#       - active_college: "ccs"
+#   - action: utter_inquire_ccs_about
+
+# # Handle out-of-context college programs query
+# - rule: Handle college query without context
+#   condition:
+#   - slot_was_set:
+#       - active_college: null
+#   steps:
+#   - intent: ccs_programs
+#   - action: utter_inquire_ccs_about
+
+# # Handle out-of-context college facilities query
+# - rule: Handle facilities query without context
+#   condition:
+#   - slot_was_set:
+#       - active_college: null
+#   steps:
+#   - intent: ccs_facilities
+#   - action: utter_inquire_ccs_about
