@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "python3 app.py"
+    "start": "./.venv/scripts/activate"
   },
   "keywords": [],
   "author": "",
