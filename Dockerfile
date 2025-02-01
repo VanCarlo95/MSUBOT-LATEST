@@ -15,7 +15,7 @@ RUN pip install --upgrade pip \
 COPY . .
 
 # Install the remaining dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade --use-feature=2020-resolver -r requirements.txt
 
 # Expose Rasa's default API port
 EXPOSE 5005
