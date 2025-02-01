@@ -1,6 +1,8 @@
 # Use Python as base image
 FROM python:3.9
 
+RUN python -m pip install rasa
+
 # Set the working directory inside the container
 WORKDIR /app
 
@@ -15,7 +17,7 @@ RUN pip install --upgrade pip \
 COPY . .
 
 # Install the remaining dependencies
-RUN pip install --upgrade --use-feature=2020-resolver -r requirements.txt
+RUN pip install --upgrade -r requirements.txt
 
 # Expose Rasa's default API port
 EXPOSE 5005
