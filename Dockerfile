@@ -1,26 +1,42 @@
-# Use Python as base image
-FROM python:3.9
+# FROM python:3.9-slim
 
-RUN python -m pip install rasa
+# RUN apt-get update \
+#     && apt-get install -y --no-install-recommends install \
+#         build-essential \
+#         curl \
+#         git \
+#         jq \
+#         gcc \
+#         libpq-dev \
 
-# Set the working directory inside the container
+# WORKDIR /app
+
+# RUN pip install --no-cache-dir --upgrade pip
+
+# RUN pip install rasa 3.6.20
+
+# ADD config.yml /app/config.yml
+# ADD domain.yml /app/domain.yml
+# ADD credentials.yml /app/credentials.yml
+# ADD endpoints.yml /app/endpoints.yml
+
+# Use the official Rasa image as the base image
+FROM rasa/rasa:3.6.20
+
+# Set the working directory
 WORKDIR /app
 
-# Copy only the requirements file first
-COPY requirements.txt . 
+# Copy the Rasa project files into the container
+COPY . /app
 
-# Upgrade pip and install necessary system packages
-RUN pip install --upgrade pip \
-    && pip install --no-cache-dir rasa tensorflow numpy
+# Install additional Python dependencies (if any)
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Now copy the rest of the project files
-COPY . .
+# Train the Rasa model
+RUN rasa train
 
-# Install the remaining dependencies
-RUN pip install --upgrade -r requirements.txt
-
-# Expose Rasa's default API port
+# Expose the port Rasa will run on
 EXPOSE 5005
 
-# Start Rasa
-CMD ["rasa", "run", "--enable-api", "--cors", "*"]
+# Set the command to run the Rasa server
+CMD ["run", "--enable-api", "--cors", "*"]

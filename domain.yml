@@ -1,296 +1,93 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - gratitude
-  - bot_challenge
-  - msuiit_about
-  - msuiit_location
-  - msuiit_colleges
-  - inquire_ccs_about
-  - ccs_programs
-  - ccs_facilities
-  - ccs_scholar
-  - ccs_duration
-  - ccs_elective
-  - ccs_eval
-  - ccs_research
-  - ccs_size
-  - ccs_exchange
-  - ccs_work
-  - ccs_mainloc
-  - ccs_deanloc
-  - ccs_deptloc
-  - ask_follow_up
-  - request_more_info
-  - switch_topic
-  - ask_program_details
-  - ask_career_prospects
-  - ask_admission_requirements
-  - ask_program_duration
-  - ask_facilities_details
-  - request_program_comparison
-  - ask_about_student_life
-  - ask_about_faculty
-  - ask_about_bscs
-  - ask_about_bsit
-  - ask_about_bsis
-  - ask_about_bsca
-  - ask_program_subjects
-  - ask_program_difficulty
-  - inquire_course_interest
-  - ask_about_msuiit_history
-  - ask_about_msuiit_chancellor
-  - ask_about_msuiit_administration
-  - ask_about_msuiit_vision_mission
-  - ask_about_msu_system
-  - ask_about_msu_governance
-  - ask_about_msu_history
-  - ask_about_msu_culture
-  - ask_about_msu_research
-  - ask_about_msu_achievements
-  - ask_about_msu_admission
-  - ask_about_msu_scholarships
-  - ask_about_student_life_msu
-  - ask_specific_campus
-  - ask_about_campus_facilities
-  - compare_msu_campuses
-  - ask_about_international_programs
-  - msuiit_rmo_about
-  - msuiit_rmo_location
-  - coe_programs
-  - coe_apply
-  - coe_adreq
-  - coe_duration
-  - coe_internship
-  - coe_faci
-  - coe_special
-  - coe_orgs
-  - coe_career
-  - coe_diff
-  - coe_research
-  - coe_elective
-  - coe_shift
-  - coe_gradprog
-  - coe_assess
-  - coe_opportunity
-  - coe_projects
-  - coe_scholarships
-  - coe_metacareer
-  - coe_faculty
-  - coe_mainloc
-  - chs_programs
-  - chs_program_duration
-  - chs_admission_requirements
-  - chs_practical_training
-  - chs_career_opportunities
-  - chs_scholarships
-  - chs_subjects
-  - chs_facilities
-  - chs_clinical_instructors
-  - chs_board_exam
-  - chs_clinical_practice
-  - chs_specialization
-  - chs_student_organizations
-  - chs_community_health_nursing
-  - chs_graduate_programs
-  - chs_assessment
-  - chs_work_abroad
-  - chs_student_projects
-  - chs_research_opportunities
-  - chs_mainloc
-  - ceba_programs
-  - ceba_bsa_program
-  - ceba_program_duration
-  - ceba_career_opportunities_bsba
-  - ceba_internships
-  - ceba_admission_requirements
-  - ceba_bshm_program
-  - ceba_scholarships
-  - ceba_facilities
-  - ceba_difference_bsba_bse
-  - ceba_shift_to_accountancy
-  - ceba_marketing_subjects
-  - ceba_student_organizations
-  - ceba_prepare_cpa_exam
-  - ceba_bshm_practical_training
-  - ceba_student_projects_bsba
-  - ceba_exchange_programs
-  - ceba_financial_vs_marketing
-  - ceba_research_opportunities
-  - ceba_employment_opportunities_bshm
-  - ceba_mainloc
-  - cass_programs_offered
-  - cass_career_opportunities
-  - cass_admission_requirements
-  - cass_specializations_focus
-  - cass_scholarships
-  - cass_application_process
-  - cass_student_organizations
-  - cass_internship_opportunities
-  - cass_research_opportunities
-  - cass_degree_completion_time
-  - cass_course_shifting
-  - cass_facilities
-  - cass_subjects_ba_history
-  - cass_elective_courses
-  - cass_community_outreach
-  - cass_student_assessment
-  - cass_distinction_from_other_colleges
-  - cass_faculty_qualifications
-  - cass_student_exchange
-  - cass_job_prospects_ba_sociology
-  - cass_mainloc
-  - ced_programs_offered
-  - ced_application_process
-  - ced_difference_beed_bsed
-  - ced_degree_completion_time
-  - ced_internship_opportunities
-  - ced_career_opportunities
-  - ced_scholarships
-  - ced_subjects_bsed_mathematics
-  - ced_elective_courses
-  - ced_student_teaching_requirement
-  - ced_student_organizations
-  - ced_graduate_programs
-  - ced_student_assessment
-  - ced_facilities
-  - ced_course_shifting
-  - ced_research_opportunities
-  - ced_specializations_sped
-  - ced_job_prospects_early_childhood
-  - ced_bachelor_physical_education
-  - ced_exchange_programs
-  - ced_mainloc
-  - csm_programs_offered
-  - csm_application_process
-  - csm_career_opportunities
-  - csm_scholarships
-  - csm_difference_bs_biology_marine_biology
-  - csm_facilities
-  - csm_undergraduate_research_opportunities
-  - csm_degree_completion_time
-  - csm_course_shifting
-  - csm_student_organizations
-  - csm_graduate_programs
-  - csm_internship_opportunities
-  - csm_student_projects
-  - csm_work_abroad_opportunities
-  - csm_student_assessment
-  - csm_fieldwork_opportunities
-  - csm_bachelor_science_mathematics
-  - csm_get_involved_research
-  - csm_exchange_programs
-  - csm_mainloc
-  - fab_lab_about
-  - fab_lab_use
-  - fab_lab_make
-  - fab_lab_access
-  - fab_lab_cost
-  - admission_about
-  - admission_inv
-  - admission_docs
-  - admission_chance
-  - admission_email
-  - admission_transfer
-  - admission_transout
-  - admission_secdegree
-  - admission_lackdoc
-#  - admission_gradprog
-#  - admission_international
-  - admission_liability
-  - scholar_avail
-  - scholar_delay
-  - scholar_lbpopen
-  - scholar_lbpcert
-  - scholar_lbpsubmit
-  - scholar_apply
-  - scholar_tag
-  - clinic_checkup
-  - clinic_dental
-  - clinic_medcert_absent
-  - clinic_medcert_travel
-  - clinic_labtest
-  - clinic_medcert_employment
-  - clinic_fasting
-  - registrar_transcript_request
-  - registrar_cor_request
-  - registrar_academic_load_revision
-  - registrar_grade_completion
-  - registrar_withdraw_subject
-  - registrar_withdraw_all_subjects
-  - registrar_add_subjects
-  - registrar_honorable_dismissal
-  - registrar_document_authentication_fee
-  - registrar_transfer_credentials
-  - registrar_cav_request
-  - registrar_clearance_access
-  - registrar_subject_availability
-  - registrar_removal_exams
-  - registrar_cross_enrollment_permit
-  - registrar_academic_calendar
-  - registrar_leave_of_absence
-  - registrar_reprint_rog
-  - registrar_academic_verification_documents
-  - registrar_check_grades
-  - registrar_accountability
-  - registrar_document_processing_time
-  - registrar_preliminary_registration_form
-  - registrar_advance_credit
-  - registrar_student_records_online
-  - registrar_deans_list
-  - registrar_graduating_students_list
-  - registrar_promissory_note
-  - registrar_cross_enrollment_requirements
-  - registrar_transcript_fee
-  - registrar_academic_records_email
-  - registrar_student_records_validation_fee
-  - registrar_shifter_status
-  - registrar_enrollment_with_pending_accountabilities
-  - registrar_unclaimed_documents
-  - registrar_university_schedule
-  - registrar_honorable_dismissal_documents
-  - registrar_academic_load_revision_form
-  - registrar_graduation_qualification
-  - registrar_form_137_138_request
-  - osds_apply_student_loan
-  - osds_financial_assistance_programs
-  - osds_qualifications_student_assistantship
-  - osds_apply_teaching_assistantship
-  - osds_find_approved_student_lodging
-  - osds_requirements_special_grants_program
-  - osds_participate_student_organizations
-  - osds_special_program_employment_students
-  - osds_submit_complaint_suggestion
-  - osds_process_organizing_extra_curricular
-  - osds_apply_office_assistantship
-  - osds_benefits_special_grants_program
-  - osds_financial_difficulties_tuition
-  - osds_qualify_special_program_employment_students
-  - osds_approved_extracurricular_activities
-  - osds_restrictions_student_organizations
-  - osds_file_complaint_student_discipline
-  - osds_requirements_personal_appliances_dormitories
-  - osds_student_petitions_process
-  - osds_run_for_student_council
-  - osds_find_scholarships
-  - osds_max_hours_student_assistantship
-  - osds_apply_multiple_financial_aid
-  - osds_help_finding_housing
-  - osds_renew_student_loan
-  - osds_guidance_counseling_center_role
-  - osds_summer_programs
-  - osds_student_elections_rules
-  - osds_help_organizing_cultural_events
-  - osds_involved_student_publication
-  - osds_academic_advising_career_counseling
-  - osds_student_organization_advisers
-  - osds_apply_scholarship
-  - osds_missing_student_id
-  - osds_find_upcoming_activities
-  - osds_penalties_non_participation_extracurricular
-  - osds_volunteer_campus_events
+
+# Core Conversational
+- default
+- greet
+- goodbye
+- bot_challenge
+- ask_follow_up_general
+
+# General University Information
+- university_about_msuiit 
+- university_location 
+- university_colleges   
+- university_history  
+- university_chancellor   
+- university_administration 
+- university_vision_mission 
+
+# MSU System Information
+- msu_system_info        
+- msu_governance
+- msu_history
+- msu_culture
+- msu_research
+- msu_achievements
+- msu_campus_comparison
+
+# General Services
+- university_admission    
+- university_scholarships 
+- university_facilities_general   
+- university_facilities_iit
+- university_student_life 
+- university_international_programs 
+
+# College Information (CCS-specific, can be replicated for other colleges)
+- ccs_general_inquiry    
+- ccs_programs_overview
+- ccs_facilities_info
+- ccs_faculty_info
+- ccs_scholarship_info  
+- ccs_duration_info
+- ccs_research_info
+- ccs_student_life
+- ccs_elective
+- ccs_size
+
+# College Location (can be replicated)
+- ccs_location_main      
+- ccs_location_dean      
+- ccs_location_departments 
+
+
+# Specific Program Inquiries
+- program_inquiry_bscs    
+- program_inquiry_bsit   
+- program_inquiry_bsis    
+- program_inquiry_bsca    
+- ccs_program_details
+- ccs_career_prospects
+- ccs_admission_requirements
+- ccs_program_comparison
+- ccs_program_difficulty
+- ccs_program_difficulty_comparison
+- ccs_evaluation
+- bsit_subjects
+- bsis_subjects
+- bsca_subjects
+- bscs_subjects
+- bsca_difficulty
+- bscs_difficulty
+- bsit_difficulty
+- bsis_difficulty
+
+# Campus Life and Services
+- ccs_exchange_programs  
+- ccs_facilities_details
+- general_facilities_usage_policy
+- general_facilities_specific
+- student_work_opportunities 
+
+# Conversation Redirection
+- ask_specific_campus
+- help_refocus
+- confirm_topic_switch
+- ask_more_details
+
+
 entities:
   - college
   - program
@@ -302,38 +99,44 @@ slots:
     type: text
     influence_conversation: true
     mappings:
-      - type: custom
-
+    - type: custom
+  
   active_topic:
     type: text
     influence_conversation: true
     mappings:
-      - type: custom
-
+    - type: custom
+  
   last_topic:
     type: text
     influence_conversation: true
     mappings:
-      - type: custom
+    - type: custom
 
   program:
     type: text
     influence_conversation: true
     mappings:
-      - type: custom
+    - type: custom
 
   location:
     type: text
     influence_conversation: true
     mappings:
-      - type: custom
+    - type: custom
 
   active_location:
     type: text
     influence_conversation: true
     mappings:
-      - type: custom
+    - type: custom
 
+  course_interest:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
   conversation_stage:
     type: categorical
     values:
@@ -343,1653 +146,885 @@ slots:
       - switching
     influence_conversation: true
     mappings:
-      - type: custom
+    - type: custom
 
 responses:
   utter_default:
     - text: "I'm sorry, I didn't understand that. Could you rephrase?"
 
   utter_greet:
-    - text: "Hello! I am A.L.A.B, your Academic Learning Assistance Bot. How can I help you today?"
-    - text: "Hi there! I'm A.L.A.B, here to assist you with information about MSU-IIT. What would you like to know?"
+  - text: "Hello! I am A.L.A.B, your Academic Learning Assistance Bot. How can I help you today?"
+  - text: "Hi there! I'm A.L.A.B, here to assist you with information about MSU-IIT. What would you like to know?"
 
   utter_goodbye:
-    - text: "Thanks for chatting! Feel free to come back if you have more questions."
-    - text: "Goodbye! Have a great day!"
-
-  utter_gratitude:
-    - text: "You're welcome! If you have any more questions, feel free to ask."
-    - text: "No problem! Let me know if you need more information."
+  - text: "Thanks for chatting! Feel free to come back if you have more questions."
+  - text: "Goodbye! Have a great day!"
 
   utter_iamabot:
-    - text: "I am ALAB (Academic Learning Assistance Bot), created to help students and visitors learn about MSU-IIT. How can I assist you today?"
+  - text: "I am ALAB (Academic Learning Assistance Bot), created to help students and visitors learn about MSU-IIT. How can I assist you today?"
 
-  utter_msuiit_about:
-    - text: "MSU-IIT (Mindanao State University - Iligan Institute of Technology) is a premier state university established in 1968. Known for its excellence in science and technology education, MSU-IIT has consistently ranked among the top universities in the Philippines. The university offers quality education across various fields including engineering, computer studies, science and mathematics, business, arts, and more."
+  utter_university_about_msuiit:
+  - text: "MSU-IIT (Mindanao State University - Iligan Institute of Technology) is a premier state university established in 1968. Known for its excellence in science and technology education, MSU-IIT has consistently ranked among the top universities in the Philippines. The university offers quality education across various fields including engineering, computer studies, science and mathematics, business, arts, and more."
 
-  utter_msuiit_location:
-    - text: "MSU-IIT is located in the heart of Iligan City, Lanao del Norte, Philippines. The main campus is situated along Andres Bonifacio Avenue, and is easily accessible by public transportation. The campus is known for its modern facilities and beautiful landscape."
+  utter_university_location:
+  - text: "MSU-IIT is located in the heart of Iligan City, Lanao del Norte, Philippines. The main campus is situated along Andres Bonifacio Avenue, and is easily accessible by public transportation. The campus is known for its modern facilities and beautiful landscape."
 
-  utter_msuiit_colleges:
-    - text: "MSU-IIT has seven colleges:\n1. College of Engineering (COE)\n2. College of Computer Studies (CCS)\n3. College of Science and Mathematics (CSM)\n4. College of Business Administration and Accountancy (CBAA)\n5. College of Arts and Social Sciences (CASS)\n6. College of Education (CED)\n7. College of Health Sciences (CHS)"
+  utter_university_colleges:
+  - text: "MSU-IIT has seven colleges:\n1. College of Engineering (COE)\n2. College of Computer Studies (CCS)\n3. College of Science and Mathematics (CSM)\n4. College of Business Administration and Accountancy (CBAA)\n5. College of Arts and Social Sciences (CASS)\n6. College of Education (CED)\n7. College of Health Sciences (CHS)"
 
-  utter_inquire_ccs_about:
-    - text: "The College of Computer Studies (CCS) is MSU-IIT's center for computing education. It offers undergraduate programs in Computer Science, Information Technology, and Information Systems. The college is known for its modern facilities, experienced faculty, and strong industry partnerships. Would you like to know more about:\n1. Our programs\n2. Facilities\n3. Career opportunities?"
+  utter_ccs_general_inquiry:
+  - text: "The College of Computer Studies (CCS) is MSU-IIT's center for computing education. It offers undergraduate programs in Computer Science, Information Technology, and Information Systems. The college is known for its modern facilities, experienced faculty, and strong industry partnerships. Would you like to know more about:\n1. Our programs\n2. Facilities\n3. Career opportunities?"
 
-  utter_ccs_programs:
-    - text: "The College of Computer Studies offers these undergraduate programs:\n\n1. BS Computer Science (BSCS): Focuses on computational theory, programming, and software development\n2. BS Information Technology (BSIT): Emphasizes practical IT applications and systems administration\n3. BS Information Systems (BSIS): Combines IT with business processes and management\n\nWhich program would you like to learn more about?"
+  utter_ccs_programs_overview:
+  - text: "The College of Computer Studies offers these undergraduate programs:\n\n1. BS Computer Science (BSCS): Focuses on computational theory, programming, and software development\n2. BS Information Technology (BSIT): Emphasizes practical IT applications and systems administration\n3. BS Information Systems (BSIS): Combines IT with business processes and management\n\nWhich program would you like to learn more about?"
 
-  utter_ccs_facilities:
-    - text: "CCS boasts modern facilities including:\n• Multiple computer laboratories with latest hardware and software\n• Research laboratories for specialized projects\n• Study areas and discussion rooms\n• High-speed internet connectivity\n• Software development studio\n• Student lounges\n• Faculty consultation rooms\n\nAll facilities are equipped with current technology to ensure students get hands-on experience with industry-standard tools."
+  utter_ccs_facilities_info:
+  - text: "CCS boasts modern facilities including:\n• Multiple computer laboratories with latest hardware and software\n• Research laboratories for specialized projects\n• Study areas and discussion rooms\n• High-speed internet connectivity\n• Software development studio\n• Student lounges\n• Faculty consultation rooms\n\nAll facilities are equipped with current technology to ensure students get hands-on experience with industry-standard tools."
 
-  utter_ccs_scholar:
-    - text: "CCS offers various scholarship opportunities for students. These include:\n- Academic Excellence Scholarships: For students with high academic performance\n- Financial Need-based Scholarships: For qualified students requiring financial assistance\n- Industry-sponsored Scholarships: From partner companies\n- Research Scholarships: For students involved in research projects\n\nRequirements vary by scholarship type, but generally include maintaining good academic standing and regular attendance."
+  utter_ccs_scholarship_info:
+  - text: "CCS offers various scholarship opportunities for students. These include:\n- Academic Excellence Scholarships: For students with high academic performance\n- Financial Need-based Scholarships: For qualified students requiring financial assistance\n- Industry-sponsored Scholarships: From partner companies\n- Research Scholarships: For students involved in research projects\n\nRequirements vary by scholarship type, but generally include maintaining good academic standing and regular attendance."
 
-  utter_ccs_duration:
-    - text: "All undergraduate programs at CCS are designed to be completed in 4 years or 8 regular semesters. Each academic year consists of two regular semesters and an optional summer term. The typical course load is 15-21 units per semester, depending on the program and year level."
+  utter_ccs_duration_info:
+  - text: "All undergraduate programs at CCS are designed to be completed in 4 years or 8 regular semesters. Each academic year consists of two regular semesters and an optional summer term. The typical course load is 15-21 units per semester, depending on the program and year level."
 
   utter_ccs_elective:
-    - text: "CCS offers a flexible elective system where students can choose specialized courses in their field of interest. This includes:\n- Technical electives in various IT specializations\n- Cross-program electives within CCS\n- General education electives\n- Industry-aligned elective courses\n\nStudents typically take electives in their 3rd and 4th years, allowing them to customize their learning path."
+  - text: "CCS offers a flexible elective system where students can choose specialized courses in their field of interest. This includes:\n- Technical electives in various IT specializations\n- Cross-program electives within CCS\n- General education electives\n- Industry-aligned elective courses\n\nStudents typically take electives in their 3rd and 4th years, allowing them to customize their learning path."
 
-  utter_ccs_eval:
-    - text: "CCS uses a comprehensive evaluation system that includes:\n- Regular examinations (40%)\n- Laboratory work and projects (30%)\n- Assignments and quizzes (20%)\n- Class participation (10%)\n\nGrading follows the university's standard system:\n- 1.0 (Excellent) to 5.0 (Failed)\n- 3.0 is the passing grade for most subjects\n- Some technical subjects require 2.5 or better to pass"
+  utter_ccs_evaluation:
+  - text: "CCS uses a comprehensive evaluation system that includes:\n- Regular examinations (40%)\n- Laboratory work and projects (30%)\n- Assignments and quizzes (20%)\n- Class participation (10%)\n\nGrading follows the university's standard system:\n- 1.0 (Excellent) to 5.0 (Failed)\n- 3.0 is the passing grade for most subjects\n- Some technical subjects require 2.5 or better to pass"
 
-  utter_ccs_research:
-    - text: "CCS has active research programs in various areas including:\n- Artificial Intelligence and Machine Learning\n- Data Science and Analytics\n- Cybersecurity\n- Software Engineering\n- Network Systems\n\nStudents can participate through:\n- Undergraduate thesis projects\n- Research assistantships\n- Collaborative industry research\n- Faculty-led research groups"
+  utter_ccs_research_info:
+  - text: "CCS has active research programs in various areas including:\n- Artificial Intelligence and Machine Learning\n- Data Science and Analytics\n- Cybersecurity\n- Software Engineering\n- Network Systems\n\nStudents can participate through:\n- Undergraduate thesis projects\n- Research assistantships\n- Collaborative industry research\n- Faculty-led research groups"
 
   utter_ccs_size:
-    - text: "CCS maintains optimal class sizes for effective learning:\n- Lecture classes: 30-40 students\n- Laboratory sessions: 20-30 students\n- Tutorial groups: 15-20 students\n- Thesis/Project groups: 3-5 students\n\nThis ensures personalized attention and quality interaction between faculty and students."
+  - text: "CCS maintains optimal class sizes for effective learning:\n- Lecture classes: 30-40 students\n- Laboratory sessions: 20-30 students\n- Tutorial groups: 15-20 students\n- Thesis/Project groups: 3-5 students\n\nThis ensures personalized attention and quality interaction between faculty and students."
 
-  utter_ccs_exchange:
-    - text: "CCS participates in various student exchange programs:\n- International university partnerships\n- ASEAN student exchange program\n- Summer internship programs abroad\n- International research collaborations\n\nOpportunities are available for qualified students, usually in their 3rd or 4th year of study."
+  utter_ccs_exchange_programs:
+  - text: "CCS participates in various student exchange programs:\n- International university partnerships\n- ASEAN student exchange program\n- Summer internship programs abroad\n- International research collaborations\n\nOpportunities are available for qualified students, usually in their 3rd or 4th year of study."
 
-  utter_ccs_work:
-    - text: "CCS supports working students through:\n- Flexible class schedules\n- Student assistant positions\n- Part-time work opportunities in campus\n- Industry internship programs\n\nWorking students should maintain satisfactory academic performance and inform their academic advisor to ensure proper balance of work and studies."
+  utter_student_work_opportunities:
+  - text: "MSU-IIT supports working students through:\n- Flexible class schedules\n- Student assistant positions\n- Part-time work opportunities in campus\n- Industry internship programs\n\nWorking students should maintain satisfactory academic performance and inform their academic advisor to ensure proper balance of work and studies."
 
-  utter_ccs_mainloc:
-    - text: "The College of Computer Studies is located in the CCS Building, a modern 4-story structure in the heart of MSU-IIT campus. It's easily accessible and recognizable by its distinctive blue-gray exterior. The building houses state-of-the-art computer laboratories, classrooms, and faculty offices."
+  utter_ccs_location_main:
+  - text: "The College of Computer Studies is located in the CCS Building, a modern 4-story structure in the heart of MSU-IIT campus. It's easily accessible and recognizable by its distinctive blue-gray exterior. The building houses state-of-the-art computer laboratories, classrooms, and faculty offices."
 
-  utter_ccs_deanloc:
-    - text: "The Dean's Office is located on the 2nd floor of the CCS Building, Room 201. It's easily accessible via the main staircase or elevator. The office is open during regular business hours (8:00 AM - 5:00 PM) on weekdays."
+  utter_ccs_location_dean:
+  - text: "The Dean's Office is located on the 2nd floor of the CCS Building, Room 201. It's easily accessible via the main staircase or elevator. The office is open during regular business hours (8:00 AM - 5:00 PM) on weekdays."
 
-  utter_ccs_deptloc:
-    - text: "Department locations in the CCS Building:\n- Computer Science Department: 3rd Floor, Room 301\n- Information Technology Department: 3rd Floor, Room 302\n- Information Systems Department: 3rd Floor, Room 303\n\nAll department offices are open during regular business hours and can be reached via stairs or elevator."
+  utter_ccs_location_departments:
+  - text: "Department locations in the CCS Building:\n- Computer Science Department: 3rd Floor, Room 301\n- Information Technology Department: 3rd Floor, Room 302\n- Information Systems Department: 3rd Floor, Room 303\n\nAll department offices are open during regular business hours and can be reached via stairs or elevator."
 
-  utter_program_details:
-    - text: |-
-        Here are the details for our programs:
+  utter_ccs_program_details:
+  - text: |-
+      Here are the details for our programs:
 
-        BSCS (Bachelor of Science in Computer Science):
-        • Core Focus: Computational theory, algorithm design, and software development
-        • Key Subjects: Advanced Programming, Data Structures, Algorithms, AI/ML
-        • Duration: 4 years
-        • Special Features: Research-oriented, strong mathematics foundation
+      BSCS (Bachelor of Science in Computer Science):
+      • Core Focus: Computational theory, algorithm design, and software development
+      • Key Subjects: Advanced Programming, Data Structures, Algorithms, AI/ML
+      • Duration: 4 years
+      • Special Features: Research-oriented, strong mathematics foundation
 
-        BSIT (Bachelor of Science in Information Technology):
-        • Core Focus: Applied technology, system administration, and network management
-        • Key Subjects: Web Development, Network Administration, Database Management
-        • Duration: 4 years
-        • Special Features: Industry-aligned, hands-on technical skills
+      BSIT (Bachelor of Science in Information Technology):
+      • Core Focus: Applied technology, system administration, and network management
+      • Key Subjects: Web Development, Network Administration, Database Management
+      • Duration: 4 years
+      • Special Features: Industry-aligned, hands-on technical skills
 
-        BSIS (Bachelor of Science in Information Systems):
-        • Core Focus: Business process automation and information management
-        • Key Subjects: Business Process Management, Systems Analysis, Enterprise Systems
-        • Duration: 4 years
-        • Special Features: Business-IT alignment, enterprise solutions
+      BSIS (Bachelor of Science in Information Systems):
+      • Core Focus: Business process automation and information management
+      • Key Subjects: Business Process Management, Systems Analysis, Enterprise Systems
+      • Duration: 4 years
+      • Special Features: Business-IT alignment, enterprise solutions
 
-  utter_career_prospects:
-    - text: |-
-        Career opportunities for our graduates include:
+  utter_ccs_career_prospects:
+  - text: |-
+      Career opportunities for our graduates include:
+      
+      For BSCS Graduates:
+      • Software Engineer (₱25,000 - ₱120,000/month)
+      • AI/ML Engineer
+      • Data Scientist
+      • Research & Development
+      • Game Developer
+      • Cloud Solutions Architect
 
-        For BSCS Graduates:
-        • Software Engineer (₱25,000 - ₱120,000/month)
-        • AI/ML Engineer
-        • Data Scientist
-        • Research & Development
-        • Game Developer
-        • Cloud Solutions Architect
+      For BSIT Graduates:
+      • Systems Administrator
+      • Network Engineer
+      • Web Developer
+      • IT Security Specialist
+      • DevOps Engineer
+      • Technical Support Specialist
 
-        For BSIT Graduates:
-        • Systems Administrator
-        • Network Engineer
-        • Web Developer
-        • IT Security Specialist
-        • DevOps Engineer
-        • Technical Support Specialist
+      For BSIS Graduates:
+      • Business Systems Analyst
+      • IT Project Manager
+      • Database Administrator
+      • ERP Consultant
+      • Digital Transformation Specialist
 
-        For BSIS Graduates:
-        • Business Systems Analyst
-        • IT Project Manager
-        • Database Administrator
-        • ERP Consultant
-        • Digital Transformation Specialist
+      For BSCS Graduates:
+      • Software Engineer 
+      • AI/ML Engineer
+      • Data Scientist 
+      • Research & Development Engineer
+      • Game Developer
+      • Cloud Solutions Architect
 
-        Many of our graduates work in:
-        • Top tech companies (Google, Microsoft, IBM)
-        • Banks and financial institutions
-        • Government agencies
-        • BPO companies
-        • Start-ups
-        • International companies (both local and abroad)
+      Companies actively hiring CS graduates:
+      • Google, Microsoft, IBM
+      • Local tech companies and startups
+      • International software companies
+      • Research institutions
+      • Game development studios
 
-  utter_admission_requirements:
-    - text: |-
-        To be admitted to CCS programs, you need:
+      Career Growth:
+      • Technical Lead
+      • Software Architect
+      • Research Scientist
+      • CTO
+      • Tech Entrepreneur
 
-        Academic Requirements:
-        • High School Average: 85% or higher
-        • Math Grade: 85% or higher
-        • Science Grade: 85% or higher
-        • English Grade: 85% or higher
+      Many of our graduates work in:
+      • Top tech companies (Google, Microsoft, IBM)
+      • Banks and financial institutions
+      • Government agencies
+      • BPO companies
+      • Start-ups
+      • International companies (both local and abroad)
 
-        Required Documents:
-        • Form 138 (Report Card)
-        • Certificate of Good Moral Character
-        • Birth Certificate
-        • 2x2 ID Pictures
-        • Medical Certificate
+  utter_ccs_admission_requirements:
+  - text: |-
+      To be admitted to CCS programs, you need:
 
-        Additional Requirements:
-        • Passing the MSU-IIT College Admission Test
-        • Interview (for specific programs)
-        • Portfolio (optional but recommended)
+      Academic Requirements:
+      • High School Average: 85% or higher
+      • Math Grade: 85% or higher
+      • Science Grade: 85% or higher
+      • English Grade: 85% or higher
 
-  utter_facilities_details:
-    - text: |-
-        CCS facilities are equipped with state-of-the-art technology:
+      Required Documents:
+      • Form 138 (Report Card)
+      • Certificate of Good Moral Character
+      • Birth Certificate
+      • 2x2 ID Pictures
+      • Medical Certificate
 
-        Computer Laboratories:
-        • 6 General Computing Labs (40 computers each)
-        • 2 Networking Labs
-        • 1 Hardware/Assembly Lab
-        • 1 Apple Development Lab
-        • 1 Research Computing Lab
+      Additional Requirements:
+      • Passing the MSU-IIT College Admission Test
+      • Interview (for specific programs)
+      • Portfolio (optional but recommended)
 
-        Equipment Specifications:
-        • Latest Intel i7/i9 Processors
-        • 32GB RAM minimum
-        • High-end Graphics Cards
-        • Dual Monitor Setup
-        • Gigabit Internet Connection
+  utter_ccs_facilities_details:
+  - text: |-
+      CCS facilities are equipped with state-of-the-art technology:
 
-        Software Available:
-        • Latest Development IDEs
-        • Virtual Machine Software
-        • Design and Multimedia Tools
-        • Database Management Systems
-        • Cloud Computing Platforms
+      Computer Laboratories:
+      • 6 General Computing Labs (40 computers each)
+      • 2 Networking Labs
+      • 1 Hardware/Assembly Lab
+      • 1 Apple Development Lab
+      • 1 Research Computing Lab
 
-        Access Hours:
-        • Regular Days: 7:00 AM - 9:00 PM
-        • Saturdays: 8:00 AM - 5:00 PM
-        • Extended hours during project periods
+      Equipment Specifications:
+      • Latest Intel i7/i9 Processors
+      • 32GB RAM minimum
+      • High-end Graphics Cards
+      • Dual Monitor Setup
+      • Gigabit Internet Connection
 
-  utter_program_comparison:
-    - text: |-
-        Here's how our programs compare:
+      Software Available:
+      • Latest Development IDEs
+      • Virtual Machine Software
+      • Design and Multimedia Tools
+      • Database Management Systems
+      • Cloud Computing Platforms
 
-        BSCS vs BSIT:
-        • BSCS focuses more on theory and complex problem-solving
-        • BSIT emphasizes practical applications and industry skills
-        • BSCS has more mathematics and algorithm courses
-        • BSIT has more hands-on technical courses
+      Access Hours:
+      • Regular Days: 7:00 AM - 9:00 PM
+      • Saturdays: 8:00 AM - 5:00 PM
+      • Extended hours during project periods
 
-        BSCS vs BSIS:
-        • BSCS is more technical and research-oriented
-        • BSIS combines IT with business processes
-        • BSCS prepares for software development
-        • BSIS prepares for business analysis and IT management
+  utter_ccs_program_comparison:
+  - text: |-
+      Here's how our programs compare:
 
-        BSIT vs BSIS:
-        • BSIT focuses on technical implementation
-        • BSIS focuses on business process improvement
-        • BSIT has more technical certifications
-        • BSIS has more business management courses
+      BSCS vs BSIT:
+      • BSCS focuses more on theory and complex problem-solving
+      • BSIT emphasizes practical applications and industry skills
+      • BSCS has more mathematics and algorithm courses
+      • BSIT has more hands-on technical courses
 
-        BSCA Comparisons:
-        • BSCA vs BSCS: BSCA focuses more on practical applications while BSCS emphasizes theory
-        • BSCA vs BSIT: BSCA specializes in application development while BSIT covers broader IT infrastructure
-        • BSCA vs BSIS: BSCA concentrates on software applications while BSIS focuses on business processes
+      BSCS vs BSIS:
+      • BSCS is more technical and research-oriented
+      • BSIS combines IT with business processes
+      • BSCS prepares for software development
+      • BSIS prepares for business analysis and IT management
 
-  utter_facilities_usage_policy:
-    - text: |-
-        Facility Usage Guidelines:
-        • Must present valid ID
-        • Reserve in advance for special projects
-        • Follow lab safety protocols
-        • No food and drinks inside
-        • Save work in designated storage
-        • Report technical issues immediately
-        • Clean as you go policy
-        • Maximum 4 hours per session during peak hours
+      BSIT vs BSIS:
+      • BSIT focuses on technical implementation
+      • BSIS focuses on business process improvement
+      • BSIT has more technical certifications
+      • BSIS has more business management courses
 
-  utter_career_prospects_cs:
-    - text: |-
-        BSCS graduates have excellent career prospects:
-        • Software Engineer (₱25,000 - ₱120,000/month)
-        • AI/ML Engineer (₱40,000 - ₱150,000/month)
-        • Data Scientist (₱35,000 - ₱180,000/month)
-        • Research & Development Engineer
-        • Game Developer
-        • Cloud Solutions Architect
+      BSCA Comparisons:
+      • BSCA vs BSCS: BSCA focuses more on practical applications while BSCS emphasizes theory
+      • BSCA vs BSIT: BSCA specializes in application development while BSIT covers broader IT infrastructure
+      • BSCA vs BSIS: BSCA concentrates on software applications while BSIS focuses on business processes
 
-        Companies actively hiring CS graduates:
-        • Google, Microsoft, IBM
-        • Local tech companies and startups
-        • International software companies
-        • Research institutions
-        • Game development studios
-
-        Career Growth:
-        • Technical Lead
-        • Software Architect
-        • Research Scientist
-        • CTO
-        • Tech Entrepreneur
+  utter_general_facilities_usage_policy:
+  - text: |-
+      Facility Usage Guidelines:
+      • Must present valid ID
+      • Reserve in advance for special projects
+      • Follow lab safety protocols
+      • No food and drinks inside
+      • Save work in designated storage
+      • Report technical issues immediately
+      • Clean as you go policy
+      • Maximum 4 hours per session during peak hours
 
   utter_bscs_details:
-    - text: |-
-        BS Computer Science (BSCS) Program Details:
+  - text: |-
+      BS Computer Science (BSCS) Program Details:
 
-        Overview:
-        • Premier program focusing on core computing principles
-        • Strong emphasis on mathematics and theoretical foundations
-        • Extensive programming and algorithm development
-        • Research-oriented approach
+      Overview:
+      • Premier program focusing on core computing principles
+      • Strong emphasis on mathematics and theoretical foundations
+      • Extensive programming and algorithm development
+      • Research-oriented approach
 
-        Key Features:
-        • Advanced mathematics courses
-        • Theoretical computer science
-        • Algorithm analysis and design
-        • Multiple programming paradigms
-        • Artificial Intelligence and Machine Learning
-        • Research methodology
+      Key Features:
+      • Advanced mathematics courses
+      • Theoretical computer science
+      • Algorithm analysis and design
+      • Multiple programming paradigms
+      • Artificial Intelligence and Machine Learning
+      • Research methodology
 
-        Learning Outcomes:
-        • Strong problem-solving skills
-        • Advanced programming capabilities
-        • Understanding of computing theory
-        • Research and analytical skills
-        • Innovation and creativity in software development
+      Learning Outcomes:
+      • Strong problem-solving skills
+      • Advanced programming capabilities
+      • Understanding of computing theory
+      • Research and analytical skills
+      • Innovation and creativity in software development
 
-        Special Features:
-        • Research opportunities
-        • Programming competitions
-        • Industry collaboration projects
-        • Advanced computing laboratories
-        • International certification preparations
+      Special Features:
+      • Research opportunities
+      • Programming competitions
+      • Industry collaboration projects
+      • Advanced computing laboratories
+      • International certification preparations
 
   utter_bsca_details:
-    - text: |-
-        BS Computer Applications (BSCA) Program Details:
+  - text: |-
+      BS Computer Applications (BSCA) Program Details:
 
-        Overview:
-        • Industry-focused program
-        • Emphasis on software applications and development
-        • Strong foundation in business applications
-        • Focus on practical computing solutions
+      Overview:
+      • Industry-focused program
+      • Emphasis on software applications and development
+      • Strong foundation in business applications
+      • Focus on practical computing solutions
 
-        Key Features:
-        • Application Development
-        • Business Software Solutions
-        • Database Applications
-        • User Interface Design
-        • Mobile Application Development
-        • Enterprise Software Development
+      Key Features:
+      • Application Development
+      • Business Software Solutions
+      • Database Applications
+      • User Interface Design
+      • Mobile Application Development
+      • Enterprise Software Development
 
-        Learning Outcomes:
-        • Software application development skills
-        • Business process understanding
-        • Database management expertise
-        • UI/UX design capabilities
-        • Project management skills
+      Learning Outcomes:
+      • Software application development skills
+      • Business process understanding
+      • Database management expertise
+      • UI/UX design capabilities
+      • Project management skills
 
-        Special Features:
-        • Industry-aligned projects
-        • Application development portfolio
-        • Business software training
-        • Internship opportunities
-        • Software development tools mastery
+      Special Features:
+      • Industry-aligned projects
+      • Application development portfolio
+      • Business software training
+      • Internship opportunities
+      • Software development tools mastery
 
   utter_bsca_subjects:
-    - text: |-
-        BSCA Curriculum Highlights:
+  - text: |-
+      BSCA Curriculum Highlights:
 
-        First Year:
-        • Introduction to Computing
-        • Fundamentals of Programming
-        • Computer Applications
-        • Business Mathematics
-        • Database Concepts
+      First Year:
+      • Introduction to Computing
+      • Fundamentals of Programming
+      • Computer Applications
+      • Business Mathematics
+      • Database Concepts
 
-        Second Year:
-        • Object-Oriented Programming
-        • Web Applications Development
-        • Database Management Systems
-        • Business Applications
-        • Systems Analysis and Design
+      Second Year:
+      • Object-Oriented Programming
+      • Web Applications Development
+      • Database Management Systems
+      • Business Applications
+      • Systems Analysis and Design
 
-        Third Year:
-        • Mobile Applications Development
-        • Enterprise Applications
-        • Software Engineering
-        • User Interface Design
-        • Project Management
+      Third Year:
+      • Mobile Applications Development
+      • Enterprise Applications
+      • Software Engineering
+      • User Interface Design
+      • Project Management
 
-        Fourth Year:
-        • Advanced Applications Development
-        • Enterprise Software Solutions
-        • Capstone Project
-        • Industry Internship
-        • Software Quality Assurance
+      Fourth Year:
+      • Advanced Applications Development
+      • Enterprise Software Solutions
+      • Capstone Project
+      • Industry Internship
+      • Software Quality Assurance
 
-        Special Topics:
-        • Cloud Applications
-        • Business Intelligence Tools
-        • Cross-platform Development
-        • Enterprise Resource Planning
+      Special Topics:
+      • Cloud Applications
+      • Business Intelligence Tools
+      • Cross-platform Development
+      • Enterprise Resource Planning
 
   utter_bsca_careers:
-    - text: |-
-        BSCA Career Paths:
+  - text: |-
+      BSCA Career Paths:
 
-        Technical Roles:
-        • Applications Developer (₱25,000 - ₱100,000/month)
-        • Software Solutions Specialist
-        • Business Applications Analyst
-        • UI/UX Developer
-        • Mobile Applications Developer
-        • Enterprise Systems Developer
+      Technical Roles:
+      • Applications Developer (₱25,000 - ₱100,000/month)
+      • Software Solutions Specialist
+      • Business Applications Analyst
+      • UI/UX Developer
+      • Mobile Applications Developer
+      • Enterprise Systems Developer
 
-        Industries:
-        • Software Development Companies
-        • Business Process Outsourcing
-        • Technology Consulting Firms
-        • Enterprise Software Companies
-        • Mobile Development Studios
-        • Corporate IT Departments
+      Industries:
+      • Software Development Companies
+      • Business Process Outsourcing
+      • Technology Consulting Firms
+      • Enterprise Software Companies
+      • Mobile Development Studios
+      • Corporate IT Departments
 
-        Growth Path:
-        • Applications Development Lead
-        • Solutions Architect
-        • Technical Project Manager
-        • Software Development Manager
-        • Enterprise Applications Consultant
+      Growth Path:
+      • Applications Development Lead
+      • Solutions Architect
+      • Technical Project Manager
+      • Software Development Manager
+      • Enterprise Applications Consultant
 
   utter_bsca_difficulty:
-    - text: |-
-        BSCA Program Difficulty Overview:
+  - text: |-
+      BSCA Program Difficulty Overview:
 
-        Key Challenges:
-        • Software development concepts
-        • Business process understanding
-        • Project management skills
-        • Application design principles
-        • Integration technologies
+      Key Challenges:
+      • Software development concepts
+      • Business process understanding
+      • Project management skills
+      • Application design principles
+      • Integration technologies
 
-        Success Factors:
-        • Programming aptitude
-        • Problem-solving skills
-        • Business mindset
-        • Project management ability
-        • Communication skills
+      Success Factors:
+      • Programming aptitude
+      • Problem-solving skills
+      • Business mindset
+      • Project management ability
+      • Communication skills
 
-        Support Available:
-        • Programming labs
-        • Project mentoring
-        • Industry workshops
-        • Development tools training
-        • Business software training
+      Support Available:
+      • Programming labs
+      • Project mentoring
+      • Industry workshops
+      • Development tools training
+      • Business software training
 
   utter_bsis_subjects:
-    - text: |-
-        BSCS Curriculum Highlights:
+  - text: |-
+      BSCS Curriculum Highlights:
 
-        First Year:
-        • Fundamentals of Programming
-        • Introduction to Computing
-        • Calculus 1 & 2
-        • Discrete Mathematics
-        • Computer Organization
+      First Year:
+      • Fundamentals of Programming
+      • Introduction to Computing
+      • Calculus 1 & 2
+      • Discrete Mathematics
+      • Computer Organization
 
-        Second Year:
-        • Data Structures and Algorithms
-        • Object-Oriented Programming
-        • Linear Algebra
-        • Computer Architecture
-        • Database Systems
+      Second Year:
+      • Data Structures and Algorithms
+      • Object-Oriented Programming
+      • Linear Algebra
+      • Computer Architecture
+      • Database Systems
 
-        Third Year:
-        • Operating Systems
-        • Theory of Computation
-        • Software Engineering
-        • Artificial Intelligence
-        • Web Development
-        • Research Methods
+      Third Year:
+      • Operating Systems
+      • Theory of Computation
+      • Software Engineering
+      • Artificial Intelligence
+      • Web Development
+      • Research Methods
 
-        Fourth Year:
-        • Machine Learning
-        • Compiler Design
-        • Parallel Computing
-        • Thesis/Capstone Project
-        • Industry Internship
+      Fourth Year:
+      • Machine Learning
+      • Compiler Design
+      • Parallel Computing
+      • Thesis/Capstone Project
+      • Industry Internship
 
-        Special Topics:
-        • Cloud Computing
-        • Big Data Analytics
-        • Computer Graphics
-        • Network Security
+      Special Topics:
+      • Cloud Computing
+      • Big Data Analytics
+      • Computer Graphics
+      • Network Security
 
   utter_bsit_details:
-    - text: |-
-        BS Information Technology (BSIT) Program Details:
+  - text: |-
+      BS Information Technology (BSIT) Program Details:
 
-        Overview:
-        • Industry-aligned IT program
-        • Focus on practical applications
-        • Strong emphasis on current technologies
-        • Hands-on technical skills development
+      Overview:
+      • Industry-aligned IT program
+      • Focus on practical applications
+      • Strong emphasis on current technologies
+      • Hands-on technical skills development
 
-        Key Features:
-        • Network administration
-        • Systems administration
-        • Web and mobile development
-        • Database management
-        • IT project management
-        • Industry certifications
+      Key Features:
+      • Network administration
+      • Systems administration
+      • Web and mobile development
+      • Database management
+      • IT project management
+      • Industry certifications
 
-        Learning Outcomes:
-        • Technical implementation skills
-        • System administration capabilities
-        • Network management expertise
-        • Web and mobile development proficiency
-        • IT service management knowledge
+      Learning Outcomes:
+      • Technical implementation skills
+      • System administration capabilities
+      • Network management expertise
+      • Web and mobile development proficiency
+      • IT service management knowledge
 
-        Special Features:
-        • Industry certifications (CISCO, CompTIA)
-        • Hands-on laboratory exercises
-        • Industry internships
-        • Real-world projects
-        • Technical support training
+      Special Features:
+      • Industry certifications (CISCO, CompTIA)
+      • Hands-on laboratory exercises
+      • Industry internships
+      • Real-world projects
+      • Technical support training
 
   utter_bsis_details:
-    - text: |-
-        BS Information Systems (BSIS) Program Details:
+  - text: |-
+      BS Information Systems (BSIS) Program Details:
 
-        Overview:
-        • Business-oriented IT program
-        • Focus on enterprise systems
-        • Integration of business and technology
-        • Management perspective of IT
+      Overview:
+      • Business-oriented IT program
+      • Focus on enterprise systems
+      • Integration of business and technology
+      • Management perspective of IT
 
-        Key Features:
-        • Business process analysis
-        • Enterprise systems
-        • Project management
-        • Information management
-        • Business analytics
+      Key Features:
+      • Business process analysis
+      • Enterprise systems
+      • Project management
+      • Information management
+      • Business analytics
 
-        Learning Outcomes:
-        • Business analysis skills
-        • IT project management
-        • Enterprise system knowledge
-        • Process improvement capabilities
-        • Business-IT alignment expertise
+      Learning Outcomes:
+      • Business analysis skills
+      • IT project management
+      • Enterprise system knowledge
+      • Process improvement capabilities
+      • Business-IT alignment expertise
 
-        Special Features:
-        • SAP training
-        • Business case studies
-        • Industry projects
-        • Management training
-        • Enterprise software experience
+      Special Features:
+      • SAP training
+      • Business case studies
+      • Industry projects
+      • Management training
+      • Enterprise software experience
 
-  utter_program_difficulty:
-    - text: |-
-        Program Difficulty Comparison:
+  utter_ccs_program_difficulty:
+  - text: |-
+      Program Difficulty Comparison:
 
-        BSCS:
-        • Most mathematically intensive
-        • Requires strong analytical skills
-        • Heavy focus on theory and algorithms
-        • Challenging programming concepts
-        • Research-intensive
+      BSCS:
+      • Most mathematically intensive
+      • Requires strong analytical skills
+      • Heavy focus on theory and algorithms
+      • Challenging programming concepts
+      • Research-intensive
 
-        BSIT:
-        • Moderate mathematical requirements
-        • Focus on practical applications
-        • Technical skill development
-        • Industry certification preparations
-        • Project-based assessments
+      BSIT:
+      • Moderate mathematical requirements
+      • Focus on practical applications
+      • Technical skill development
+      • Industry certification preparations
+      • Project-based assessments
 
-        BSIS:
-        • Balance of business and technical
-        • Management concepts
-        • Process analysis focus
-        • Enterprise system complexity
-        • Business case analysis
+      BSIS:
+      • Balance of business and technical
+      • Management concepts
+      • Process analysis focus
+      • Enterprise system complexity
+      • Business case analysis
 
-        Success Factors:
-        • Regular study habits
-        • Strong problem-solving skills
-        • Time management
-        • Practice and application
-        • Team collaboration
+      Success Factors:
+      • Regular study habits
+      • Strong problem-solving skills
+      • Time management
+      • Practice and application
+      • Team collaboration
 
-  utter_cs_it_comparison:
-    - text: |-
-        Comparing BSCS and BSIT in detail:
+  utter_ccs_program_difficulty_comparison:
+  - text: |-
+      Relative Program Difficulty:
 
-        Academic Focus:
-        • BSCS: Theoretical foundations, algorithms, and complex problem-solving
-        • BSIT: Practical applications, system implementation, and industry tools
+      BSCS:
+      • Highest mathematical complexity
+      • Most theory-intensive
+      • Requires strong analytical skills
+      • Heavy focus on algorithms and computation theory
 
-        Mathematics Level:
-        • BSCS: Heavy emphasis on mathematics (Calculus, Linear Algebra, etc.)
-        • BSIT: Moderate mathematics requirements focused on applied concepts
+      BSIT:
+      • Moderate mathematical requirements
+      • Balance of theory and practice
+      • Focus on technical skills
+      • Industry-standard certifications
 
-        Programming Depth:
-        • BSCS: Deep dive into programming concepts and language theory
-        • BSIT: Focus on practical programming and development tools
+      BSIS:
+      • Business-oriented mathematics
+      • Focus on management concepts
+      • Integration of business and IT
+      • Process analysis emphasis
 
-        Career Paths:
-        • BSCS: Software Development, Research, AI/ML, Algorithm Design
-        • BSIT: System Administration, Network Management, Web Development
+  utter_ccs_student_life:
+  - text: |-
+      Student Life at CCS:
 
-        Industry Preparation:
-        • BSCS: Research and development oriented
-        • BSIT: Industry certification and immediate employment oriented
+      Organizations:
+      • Computer Science Society (CSS)
+      • Association of Information Technology Students (AITS)
+      • Information Systems Society (ISS)
+      • Programming Team
+      • Research Club
 
-  utter_program_difficulty_comparison:
-    - text: |-
-        Relative Program Difficulty:
+      Activities:
+      • Annual Tech Week
+      • Coding Competitions
+      • Hackathons
+      • Tech Talks and Seminars
+      • Industry Site Visits
+      • Programming Bootcamps
 
-        BSCS:
-        • Highest mathematical complexity
-        • Most theory-intensive
-        • Requires strong analytical skills
-        • Heavy focus on algorithms and computation theory
+      Support Systems:
+      • Peer Tutoring Program
+      • Mentorship System
+      • Study Groups
+      • Academic Counseling
+      • Career Development Programs
 
-        BSIT:
-        • Moderate mathematical requirements
-        • Balance of theory and practice
-        • Focus on technical skills
-        • Industry-standard certifications
+      Facilities for Students:
+      • Student Lounges
+      • Collaboration Spaces
+      • 24/7 Computer Labs (during projects)
+      • Discussion Rooms
+      • Gaming and Recreation Area
 
-        BSIS:
-        • Business-oriented mathematics
-        • Focus on management concepts
-        • Integration of business and IT
-        • Process analysis emphasis
+  utter_ccs_faculty_info:
+  - text: |-
+      CCS Faculty Information:
 
-  utter_student_life:
-    - text: |-
-        Student Life at CCS:
+      Qualifications:
+      • PhD and Master's degree holders
+      • Industry certified professionals
+      • Active researchers
+      • International conference speakers
+      • Industry practitioners
 
-        Organizations:
-        • Computer Science Society (CSS)
-        • Association of Information Technology Students (AITS)
-        • Information Systems Society (ISS)
-        • Programming Team
-        • Research Club
+      Teaching Approach:
+      • Hands-on learning
+      • Industry-based projects
+      • Research mentoring
+      • Interactive lectures
+      • Laboratory work
 
-        Activities:
-        • Annual Tech Week
-        • Coding Competitions
-        • Hackathons
-        • Tech Talks and Seminars
-        • Industry Site Visits
-        • Programming Bootcamps
+      Support for Students:
+      • Regular consultation hours
+      • Online mentoring
+      • Career guidance
+      • Research supervision
+      • Industry networking
 
-        Support Systems:
-        • Peer Tutoring Program
-        • Mentorship System
-        • Study Groups
-        • Academic Counseling
-        • Career Development Programs
-
-        Facilities for Students:
-        • Student Lounges
-        • Collaboration Spaces
-        • 24/7 Computer Labs (during projects)
-        • Discussion Rooms
-        • Gaming and Recreation Area
-
-  utter_faculty_info:
-    - text: |-
-        CCS Faculty Information:
-
-        Qualifications:
-        • PhD and Master's degree holders
-        • Industry certified professionals
-        • Active researchers
-        • International conference speakers
-        • Industry practitioners
-
-        Teaching Approach:
-        • Hands-on learning
-        • Industry-based projects
-        • Research mentoring
-        • Interactive lectures
-        • Laboratory work
-
-        Support for Students:
-        • Regular consultation hours
-        • Online mentoring
-        • Career guidance
-        • Research supervision
-        • Industry networking
-
-        Specializations:
-        • Software Development
-        • Network Security
-        • Data Science
-        • AI and Machine Learning
-        • Business Analytics
-        • Web Technologies
+      Specializations:
+      • Software Development
+      • Network Security
+      • Data Science
+      • AI and Machine Learning
+      • Business Analytics
+      • Web Technologies
 
   utter_bscs_difficulty:
-    - text: |-
-        BSCS Program Difficulty Overview:
+  - text: |-
+      BSCS Program Difficulty Overview:
 
-        Key Challenges:
-        • Advanced mathematics courses
-        • Complex programming concepts
-        • Theoretical computer science
-        • Algorithm analysis
-        • Research requirements
+      Key Challenges:
+      • Advanced mathematics courses
+      • Complex programming concepts
+      • Theoretical computer science
+      • Algorithm analysis
+      • Research requirements
 
-        Success Factors:
-        • Strong analytical skills
-        • Mathematical aptitude
-        • Problem-solving ability
-        • Dedication to learning
-        • Time management
+      Success Factors:
+      • Strong analytical skills
+      • Mathematical aptitude
+      • Problem-solving ability
+      • Dedication to learning
+      • Time management
 
-        Support Available:
-        • Peer tutoring
-        • Faculty consultations
-        • Study groups
-        • Online resources
-        • Programming labs
+      Support Available:
+      • Peer tutoring
+      • Faculty consultations
+      • Study groups
+      • Online resources
+      • Programming labs
 
   utter_bsit_difficulty:
-    - text: |-
-        BSIT Program Difficulty Overview:
+  - text: |-
+      BSIT Program Difficulty Overview:
 
-        Key Challenges:
-        • Technical implementations
-        • Network configurations
-        • System administration
-        • Project management
-        • Industry certifications
+      Key Challenges:
+      • Technical implementations
+      • Network configurations
+      • System administration
+      • Project management
+      • Industry certifications
 
-        Success Factors:
-        • Practical mindset
-        • Technical aptitude
-        • Project management skills
-        • Team collaboration
-        • Industry awareness
+      Success Factors:
+      • Practical mindset
+      • Technical aptitude
+      • Project management skills
+      • Team collaboration
+      • Industry awareness
 
-        Support Available:
-        • Hands-on workshops
-        • Laboratory sessions
-        • Industry mentoring
-        • Certification preparation
-        • Technical tutorials
+      Support Available:
+      • Hands-on workshops
+      • Laboratory sessions
+      • Industry mentoring
+      • Certification preparation
+      • Technical tutorials
 
   utter_bscs_subjects:
-    - text: |-
-        BSCS Curriculum Highlights:
+  - text: |-
+      BSCS Curriculum Highlights:
 
-        First Year:
-        • Fundamentals of Programming
-        • Introduction to Computing
-        • Calculus 1 & 2
-        • Discrete Mathematics
-        • Computer Organization
+      First Year:
+      • Fundamentals of Programming
+      • Introduction to Computing
+      • Calculus 1 & 2
+      • Discrete Mathematics
+      • Computer Organization
 
-        Second Year:
-        • Data Structures and Algorithms
-        • Object-Oriented Programming
-        • Linear Algebra
-        • Computer Architecture
-        • Database Systems
+      Second Year:
+      • Data Structures and Algorithms
+      • Object-Oriented Programming
+      • Linear Algebra
+      • Computer Architecture
+      • Database Systems
 
-        Third Year:
-        • Operating Systems
-        • Theory of Computation
-        • Software Engineering
-        • Artificial Intelligence
-        • Web Development
-        • Research Methods
+      Third Year:
+      • Operating Systems
+      • Theory of Computation
+      • Software Engineering
+      • Artificial Intelligence
+      • Web Development
+      • Research Methods
 
-        Fourth Year:
-        • Machine Learning
-        • Compiler Design
-        • Parallel Computing
-        • Thesis/Capstone Project
-        • Industry Internship
+      Fourth Year:
+      • Machine Learning
+      • Compiler Design
+      • Parallel Computing
+      • Thesis/Capstone Project
+      • Industry Internship
 
-        Special Topics:
-        • Cloud Computing
-        • Big Data Analytics
-        • Computer Graphics
-        • Network Security
+      Special Topics:
+      • Cloud Computing
+      • Big Data Analytics
+      • Computer Graphics
+      • Network Security
 
   utter_bsis_difficulty:
-    - text: |-
-        BSIS Program Difficulty Overview:
+  - text: |-
+      BSIS Program Difficulty Overview:
 
-        Key Challenges:
-        • Business process analysis
-        • System integration
-        • Enterprise software
-        • Project coordination
-        • Business analytics
+      Key Challenges:
+      • Business process analysis
+      • System integration
+      • Enterprise software
+      • Project coordination
+      • Business analytics
 
-        Success Factors:
-        • Business acumen
-        • Analytical thinking
-        • Communication skills
-        • Process understanding
-        • Management ability
+      Success Factors:
+      • Business acumen
+      • Analytical thinking
+      • Communication skills
+      • Process understanding
+      • Management ability
 
-        Support Available:
-        • Business case studies
-        • Industry projects
-        • Enterprise software training
-        • Management workshops
-        • Business analytics tools
+      Support Available:
+      • Business case studies
+      • Industry projects
+      • Enterprise software training
+      • Management workshops
+      • Business analytics tools
 
   utter_bscs_careers:
-    - text: |-
-        BSCS Career Paths:
+  - text: |-
+      BSCS Career Paths:
 
-        Technical Roles:
-        • Software Engineer (₱25,000 - ₱120,000/month)
-        • AI/ML Engineer (₱40,000 - ₱150,000/month)
-        • Data Scientist (₱35,000 - ₱180,000/month)
-        • Research Developer
-        • Algorithm Specialist
+      Technical Roles:
+      • Software Engineer (₱25,000 - ₱120,000/month)
+      • AI/ML Engineer (₱40,000 - ₱150,000/month)
+      • Data Scientist (₱35,000 - ₱180,000/month)
+      • Research Developer
+      • Algorithm Specialist
 
-        Industries:
-        • Tech Companies (Google, Microsoft, IBM)
-        • Research Institutions
-        • Game Development Studios
-        • AI/ML Companies
-        • Financial Technology
+      Industries:
+      • Tech Companies (Google, Microsoft, IBM)
+      • Research Institutions
+      • Game Development Studios
+      • AI/ML Companies
+      • Financial Technology
 
-        Growth Path:
-        • Technical Lead
-        • Software Architect
-        • Research Scientist
-        • Chief Technology Officer
-        • Tech Entrepreneur
+      Growth Path:
+      • Technical Lead
+      • Software Architect
+      • Research Scientist
+      • Chief Technology Officer
+      • Tech Entrepreneur
 
   utter_bsit_careers:
-    - text: |-
-        BSIT Career Paths:
+  - text: |-
+      BSIT Career Paths:
 
-        Technical Roles:
-        • Systems Administrator (₱25,000 - ₱80,000/month)
-        • Network Engineer (₱30,000 - ₱100,000/month)
-        • Web Developer (₱25,000 - ₱120,000/month)
-        • IT Security Specialist
-        • Cloud Engineer
+      Technical Roles:
+      • Systems Administrator (₱25,000 - ₱80,000/month)
+      • Network Engineer (₱30,000 - ₱100,000/month)
+      • Web Developer (₱25,000 - ₱120,000/month)
+      • IT Security Specialist
+      • Cloud Engineer
 
-        Industries:
-        • IT Services
-        • Telecommunications
-        • Banking and Finance
-        • E-commerce
-        • BPO Companies
+      Industries:
+      • IT Services
+      • Telecommunications
+      • Banking and Finance
+      • E-commerce
+      • BPO Companies
 
-        Growth Path:
-        • IT Manager
-        • Infrastructure Architect
-        • Security Consultant
-        • DevOps Engineer
-        • Technical Director
+      Growth Path:
+      • IT Manager
+      • Infrastructure Architect
+      • Security Consultant
+      • DevOps Engineer
+      • Technical Director
 
   utter_bsis_careers:
-    - text: |-
-        BSIS Career Paths:
+  - text: |-
+      BSIS Career Paths:
 
-        Business-Tech Roles:
-        • Business Analyst (₱25,000 - ₱90,000/month)
-        • IT Project Manager (₱40,000 - ₱150,000/month)
-        • ERP Consultant (₱35,000 - ₱120,000/month)
-        • Systems Integrator
-        • Business Process Manager
+      Business-Tech Roles:
+      • Business Analyst (₱25,000 - ₱90,000/month)
+      • IT Project Manager (₱40,000 - ₱150,000/month)
+      • ERP Consultant (₱35,000 - ₱120,000/month)
+      • Systems Integrator
+      • Business Process Manager
 
-        Industries:
-        • Banking and Finance
-        • Consulting Firms
-        • Enterprise Software Companies
-        • Business Process Outsourcing
-        • Corporate IT Departments
+      Industries:
+      • Banking and Finance
+      • Consulting Firms
+      • Enterprise Software Companies
+      • Business Process Outsourcing
+      • Corporate IT Departments
 
-        Growth Path:
-        • IT Business Manager
-        • Solutions Architect
-        • Digital Transformation Lead
-        • Business Technology Director
-        • Chief Information Officer
-
-  utter_inquire_course_interest:
-    - text: |-
-        Based on your interest, here are my recommendations:
-
-        If you enjoy {topic}:
-
-        For Programming/Computers/Technology:
-        • BSCS - If you like mathematics, algorithms, and theoretical aspects
-        • BSIT - If you prefer hands-on technical work and system administration
-        • BSIS - If you're interested in business applications of technology
-
-        For Business:
-        • BSIS - Best choice for combining business and IT
-
-        For Mathematics/Science:
-        • BSCS - Strong focus on mathematical concepts and computational theory
-
-        For Design:
-        • BSIT - Offers web development and UI/UX design opportunities
-
-        Would you like to know more about any of these programs?
+      Growth Path:
+      • IT Business Manager
+      • Solutions Architect
+      • Digital Transformation Lead
+      • Business Technology Director
+      • Chief Information Officer
 
   utter_bsit_subjects:
-    - text: "The subjects for BSIT include Programming, Networking, and Web Development."
+  - text: "The subjects for BSIT include Programming, Networking, and Web Development."
 
-  utter_msuiit_history:
-    - text: "MSU-IIT was established in 1968 under Republic Act 5363. Originally part of the MSU System, it has grown into one of the premier technological institutions in the Philippines. The institute has consistently maintained its reputation for academic excellence, particularly in science and technology education."
+  utter_university_history:
+  - text: "MSU-IIT was established in 1968 under Republic Act 5363. Originally part of the MSU System, it has grown into one of the premier technological institutions in the Philippines. The institute has consistently maintained its reputation for academic excellence, particularly in science and technology education."
 
-  utter_msuiit_chancellor:
-    - text: "The current Chancellor of MSU-IIT is Dr. Alizedney M. Ditucalan. Under his leadership, the university has achieved significant milestones, including ranking 3rd among Philippine universities in the Times Higher Education (THE) World University Rankings 2025. Chancellor Ditucalan has emphasized strengthening academic publishing and research initiatives."
+  utter_university_chancellor:
+  - text: "The current Chancellor of MSU-IIT is Dr. Alizedney M. Ditucalan. Under his leadership, the university has achieved significant milestones, including ranking 3rd among Philippine universities in the Times Higher Education (THE) World University Rankings 2025. Chancellor Ditucalan has emphasized strengthening academic publishing and research initiatives."
 
-  utter_msuiit_administration:
-    - text: "MSU-IIT's administration is structured with several Vice Chancellors overseeing specific areas:\n• Vice Chancellor for Academic Affairs: Manages academic programs\n• Vice Chancellor for Research and Extension: Oversees research and community services\n• Vice Chancellor for Administration and Finance: Handles administrative and financial operations\n• Vice Chancellor for Planning and Development: Focuses on strategic planning\n• Vice Chancellor for Student Services: Manages student welfare\n\nThese leaders work together to ensure the university's continued growth and excellence."
+  utter_university_administration:
+  - text: "MSU-IIT's administration is structured with several Vice Chancellors overseeing specific areas:\n• Vice Chancellor for Academic Affairs: Manages academic programs\n• Vice Chancellor for Research and Extension: Oversees research and community services\n• Vice Chancellor for Administration and Finance: Handles administrative and financial operations\n• Vice Chancellor for Planning and Development: Focuses on strategic planning\n• Vice Chancellor for Student Services: Manages student welfare\n\nThese leaders work together to ensure the university's continued growth and excellence."
 
-  utter_msuiit_vision_mission:
-    - text: "MSU-IIT's Vision: To be a premier university integrating academic excellence, research, and community service while fostering peace and development in Mindanao.\n\nMission: To provide high-quality education, promote cultural diversity, and contribute to the socio-economic development of Mindanao through:\n• Excellence in teaching and learning\n• Innovative research and development\n• Active community engagement\n• Cultural integration and understanding"
+  utter_university_vision_mission:
+  - text: "MSU-IIT's Vision: To be a premier university integrating academic excellence, research, and community service while fostering peace and development in Mindanao.\n\nMission: To provide high-quality education, promote cultural diversity, and contribute to the socio-economic development of Mindanao through:\n• Excellence in teaching and learning\n• Innovative research and development\n• Active community engagement\n• Cultural integration and understanding"
 
-  utter_msu_system:
-    - text: "The Mindanao State University (MSU) System is one of the largest university systems in the Philippines, with multiple campuses across Mindanao. The main campus is in Marawi City, with major branches including:\n• MSU-IIT (Iligan Institute of Technology)\n• MSU-General Santos\n• MSU-Maguindanao\n• MSU-Tawi-Tawi College of Technology and Oceanography (MSU-TCTO)\n• Several other satellite campuses throughout Mindanao\n\nEach campus has its own specializations while contributing to MSU's mission of providing quality education and promoting peace and development in Mindanao."
+  utter_msu_system_info:
+  - text: "The Mindanao State University (MSU) System is one of the largest university systems in the Philippines, with multiple campuses across Mindanao. The main campus is in Marawi City, with major branches including:\n• MSU-IIT (Iligan Institute of Technology)\n• MSU-General Santos\n• MSU-Maguindanao\n• MSU-Tawi-Tawi College of Technology and Oceanography (MSU-TCTO)\n• Several other satellite campuses throughout Mindanao\n\nEach campus has its own specializations while contributing to MSU's mission of providing quality education and promoting peace and development in Mindanao."
 
   utter_msu_governance:
-    - text: "The MSU System is governed by:\n• A University President who oversees all campuses\n• A Board of Regents as the highest policy-making body\n• Individual Chancellor or Director for each campus\n\nThis structure ensures coordinated development while allowing each campus to maintain its unique identity and focus. Each campus has its own set of Vice Chancellors or Directors who manage specific aspects of operations."
+  - text: "The MSU System is governed by:\n• A University President who oversees all campuses\n• A Board of Regents as the highest policy-making body\n• Individual Chancellor or Director for each campus\n\nThis structure ensures coordinated development while allowing each campus to maintain its unique identity and focus. Each campus has its own set of Vice Chancellors or Directors who manage specific aspects of operations."
 
   utter_msu_history:
-    - text: "MSU was established on September 1, 1961, through Republic Act 1387 (amended by RA 1893). It was founded with a unique mission to promote education and cultural integration among the diverse peoples of Mindanao. The university has since grown from its main campus in Marawi to include multiple campuses across Mindanao, each contributing to the region's development. MSU-IIT, established in 1968, has developed into one of the system's premier technological institutes."
+  - text: "MSU was established on September 1, 1961, through Republic Act 1387 (amended by RA 1893). It was founded with a unique mission to promote education and cultural integration among the diverse peoples of Mindanao. The university has since grown from its main campus in Marawi to include multiple campuses across Mindanao, each contributing to the region's development. MSU-IIT, established in 1968, has developed into one of the system's premier technological institutes."
 
   utter_msu_culture:
-    - text: "MSU celebrates a rich cultural heritage through:\n• Annual cultural events like Kanduri (traditional feast)\n• Integration of Muslim, Christian, and Indigenous Peoples' traditions\n• Cultural performances and festivals\n• Peace-building initiatives\n• Interfaith dialogues and activities\n\nThe university serves as a 'social laboratory' for peaceful coexistence among Mindanao's diverse cultural groups, promoting understanding and unity through education."
+  - text: "MSU celebrates a rich cultural heritage through:\n• Annual cultural events like Kanduri (traditional feast)\n• Integration of Muslim, Christian, and Indigenous Peoples' traditions\n• Cultural performances and festivals\n• Peace-building initiatives\n• Interfaith dialogues and activities\n\nThe university serves as a 'social laboratory' for peaceful coexistence among Mindanao's diverse cultural groups, promoting understanding and unity through education."
 
   utter_msu_research:
-    - text: "MSU conducts significant research in various areas:\n• Peace and Development Studies\n• Marine and Environmental Sciences\n• Agricultural Innovation\n• Cultural Heritage Preservation\n• Technology and Engineering\n• Climate Change Adaptation\n\nThe university houses several research centers, including:\n• Institute of Peace and Development in Mindanao (IPDM)\n• Marine Research Facilities\n• Environmental Research Centers\n• Technology Innovation Hubs"
+  - text: "MSU conducts significant research in various areas:\n• Peace and Development Studies\n• Marine and Environmental Sciences\n• Agricultural Innovation\n• Cultural Heritage Preservation\n• Technology and Engineering\n• Climate Change Adaptation\n\nThe university houses several research centers, including:\n• Institute of Peace and Development in Mindanao (IPDM)\n• Marine Research Facilities\n• Environmental Research Centers\n• Technology Innovation Hubs"
 
   utter_msu_achievements:
-    - text: "MSU has achieved numerous distinctions:\n• Recognition as a Center of Excellence in various fields\n• Strong performance in licensure examinations\n• Notable research publications and innovations\n• MSU-IIT's ranking as 3rd among Philippine universities in THE World University Rankings 2025\n• Production of distinguished alumni in various fields\n• Recognition for peace-building initiatives in Mindanao"
+  - text: "MSU has achieved numerous distinctions:\n• Recognition as a Center of Excellence in various fields\n• Strong performance in licensure examinations\n• Notable research publications and innovations\n• MSU-IIT's ranking as 3rd among Philippine universities in THE World University Rankings 2025\n• Production of distinguished alumni in various fields\n• Recognition for peace-building initiatives in Mindanao"
 
-  utter_msu_admission:
-    - text: "To be admitted to MSU:\n1. Pass the MSU System Admission and Scholarship Examination (SASE)\n2. Meet specific program requirements\n3. Submit required documents:\n   • Form 138 (Report Card)\n   • Certificate of Good Moral Character\n   • Birth Certificate\n   • Medical Certificate\n\nNote: Requirements may vary by campus and program. Contact the specific campus admission office for detailed information."
+  utter_university_admission:
+  - text: "To be admitted to MSU:\n1. Pass the MSU System Admission and Scholarship Examination (SASE)\n2. Meet specific program requirements\n3. Submit required documents:\n   • Form 138 (Report Card)\n   • Certificate of Good Moral Character\n   • Birth Certificate\n   • Medical Certificate\n\nNote: Requirements may vary by campus and program. Contact the specific campus admission office for detailed information."
 
-  utter_msu_scholarships:
-    - text: "MSU offers various scholarship opportunities:\n• Entrance Scholarships for top SASE performers\n• Academic Scholarships for high-achieving students\n• Cultural and Athletic Grants\n• Financial Aid Programs\n• Government Scholarship Programs\n• Research Scholarships\n• Special Grants for Indigenous Peoples\n\nEach scholarship has specific requirements and benefits. Contact the Scholarship Office for detailed information and application procedures."
+  utter_university_scholarships:
+  - text: "MSU offers various scholarship opportunities:\n• Entrance Scholarships for top SASE performers\n• Academic Scholarships for high-achieving students\n• Cultural and Athletic Grants\n• Financial Aid Programs\n• Government Scholarship Programs\n• Research Scholarships\n• Special Grants for Indigenous Peoples\n\nEach scholarship has specific requirements and benefits. Contact the Scholarship Office for detailed information and application procedures."
 
-  utter_student_life_general:
-    - text: "Student life in the MSU System is rich and diverse, with each campus offering unique experiences. Common features across campuses include:\n• Student Government and Organizations\n• Cultural Groups and Performances\n• Sports Teams and Competitions\n• Academic Clubs\n• Religious Organizations\n• Community Service Programs\n\nWould you like to know about student life at a specific campus?"
+  utter_university_student_life:
+  - text: "Student life at MSU-IIT features:\n• Over 50 recognized student organizations\n• Annual TechWeek and Innovation Festivals\n• Modern sports facilities and varsity teams\n• Cultural performances at the Mini-Theater\n• Active student government\n• Regular academic competitions\n• Vibrant research community\n• Strong industry partnerships for internships\n• Regular cultural and academic events"
 
-  utter_student_life_iit:
-    - text: "Student life at MSU-IIT features:\n• Over 50 recognized student organizations\n• Annual TechWeek and Innovation Festivals\n• Modern sports facilities and varsity teams\n• Cultural performances at the Mini-Theater\n• Active student government\n• Regular academic competitions\n• Vibrant research community\n• Strong industry partnerships for internships\n• Regular cultural and academic events"
+  utter_university_facilities_general:
+  - text: "MSU campuses are equipped with various facilities to support academic and student life:\n• Libraries and Learning Centers\n• Research Laboratories\n• Sports Facilities\n• Student Centers\n• Healthcare Services\n• Prayer Rooms and Religious Facilities\n• Cafeterias and Food Courts\n• Transportation Services\n\nWould you like specific information about facilities at a particular campus?"
 
-  utter_student_life_marawi:
-    - text: "Student life at MSU-Marawi main campus includes:\n• Rich cultural diversity integration\n• Traditional celebrations like Kanduri\n• Active peace and development initiatives\n• Strong focus on cultural preservation\n• Regular sports tournaments\n• Student exchange programs\n• Community outreach activities\n• Cultural performances and festivals"
+  utter_university_facilities_iit:
+  - text: "MSU-IIT facilities include:\n• Modern Engineering and Technology Labs\n• Advanced Computing Facilities\n• Premier Research Centers\n• Olympic-size Swimming Pool\n• Sports Complex\n• Mini-Theater for Performances\n• Innovation Hub\n• Student Lounges\n• Modern Library System\n• Smart Classrooms"
 
-  utter_facilities_general:
-    - text: "MSU campuses are equipped with various facilities to support academic and student life:\n• Libraries and Learning Centers\n• Research Laboratories\n• Sports Facilities\n• Student Centers\n• Healthcare Services\n• Prayer Rooms and Religious Facilities\n• Cafeterias and Food Courts\n• Transportation Services\n\nWould you like specific information about facilities at a particular campus?"
+  utter_university_international_programs:
+  - text: "MSU's international programs include:\n\nPartnerships:\n• Academic collaboration with universities in ASEAN countries\n• Research partnerships with international institutions\n• Student and faculty exchange programs\n\nOpportunities:\n• Study Abroad Programs\n• International Internships\n• Research Collaborations\n• Cultural Exchange Programs\n• International Conferences\n\nEach campus has specific international programs. Would you like to know about programs at a particular campus?"
 
-  utter_facilities_iit:
-    - text: "MSU-IIT facilities include:\n• Modern Engineering and Technology Labs\n• Advanced Computing Facilities\n• Premier Research Centers\n• Olympic-size Swimming Pool\n• Sports Complex\n• Mini-Theater for Performances\n• Innovation Hub\n• Student Lounges\n• Modern Library System\n• Smart Classrooms"
-
-  utter_international_programs:
-    - text: "MSU's international programs include:\n\nPartnerships:\n• Academic collaboration with universities in ASEAN countries\n• Research partnerships with international institutions\n• Student and faculty exchange programs\n\nOpportunities:\n• Study Abroad Programs\n• International Internships\n• Research Collaborations\n• Cultural Exchange Programs\n• International Conferences\n\nEach campus has specific international programs. Would you like to know about programs at a particular campus?"
-
-  utter_campus_comparison:
-    - text: "Key differences between MSU campuses:\n\nMSU-Marawi (Main Campus):\n• Largest campus\n• Strong focus on cultural integration\n• Comprehensive program offerings\n• Center for Islamic Studies\n\nMSU-IIT:\n• Premier Science & Technology campus\n• Highest accreditation levels\n• Strong research focus\n• Industry partnerships\n\nMSU-TCTO:\n• Marine Science specialization\n• Oceanography programs\n• Coastal research initiatives\n\nMSU-Gensan:\n• Strong Business programs\n• Agricultural studies\n• Community development focus\n\nWould you like more specific details about any campus?"
+  utter_msu_campus_comparison:
+  - text: "Key differences between MSU campuses:\n\nMSU-Marawi (Main Campus):\n• Largest campus\n• Strong focus on cultural integration\n• Comprehensive program offerings\n• Center for Islamic Studies\n\nMSU-IIT:\n• Premier Science & Technology campus\n• Highest accreditation levels\n• Strong research focus\n• Industry partnerships\n\nMSU-TCTO:\n• Marine Science specialization\n• Oceanography programs\n• Coastal research initiatives\n\nMSU-Gensan:\n• Strong Business programs\n• Agricultural studies\n• Community development focus\n\nWould you like more specific details about any campus?"
 
   utter_ask_specific_campus:
-    - text: "Which campus would you like to know more about? I can provide specific information about:\n• MSU-Marawi (Main Campus)\n• MSU-IIT\n• MSU-TCTO\n• MSU-Gensan\n• Other satellite campuses"
+  - text: "Which campus would you like to know more about? I can provide specific information about:\n• MSU-Marawi (Main Campus)\n• MSU-IIT\n• MSU-TCTO\n• MSU-Gensan\n• Other satellite campuses"
 
-  utter_facilities_specific:
-    - text: "Looking for information about facilities at {location}? I can tell you about:\n• Academic facilities\n• Research centers\n• Student amenities\n• Sports facilities\n• Support services\n\nWhat specific aspects would you like to know about?"
+  utter_general_facilities_specific:
+  - text: "Looking for information about facilities at {location}? I can tell you about:\n• Academic facilities\n• Research centers\n• Student amenities\n• Sports facilities\n• Support services\n\nWhat specific aspects would you like to know about?"
 
   utter_ask_follow_up_general:
-    - text: "Would you like to know more about any specific aspect of MSU-IIT?"
+  - text: "Would you like to know more about any specific aspect of MSU-IIT?"
 
   utter_ask_more_details:
-    - text: "Would you like to know more about specific aspects of {active_topic}?"
-
-  utter_confirm_topic_switch:
-    - text: "I see you're asking about {active_topic} now. Would you like me to tell you about that instead?"
+  - text: "Would you like to know more about specific aspects of {active_topic}?"
+  
+  utter_confirm_topic_switch: 
+  - text: "I see you're interested in {active_topic}. Would you like to know more about that?"
+    condition:
+      - type: slot
+        name: active_topic
+        value: not_null
+  - text: "What topic would you like to know more about?"
 
   utter_help_refocus:
-    - text: "I notice we've moved from {last_topic} to {active_topic}. What specifically would you like to know about {active_topic}?"
-
-  utter_msuiit_rmo_about:
-    - text: "The Research Management Office is the office tasked to promote, manage, monitor, and evaluate the research undertakings of the Institute."
-
-  utter_msuiit_rmo_location:
-    - text: "The OVCRE or RMO is located at the 3rd floor of building number 6 inside the campus."
-
-  utter_coe_programs:
-    - text: "The College of Engineering offers the following programs: Bachelor of Science in Civil Engineering, Bachelor of Science in Mechanical Engineering, Bachelor of Science in Electrical Engineering, Bachelor of Science in Electronics Engineering, Bachelor of Science in Computer Engineering, Bachelor of Science in Metallurgical Engineering, Bachelor of Science in Mining Engineering, and Bachelor of Science in Environmental Engineering."
-
-  utter_coe_apply:
-    - text: "You need to apply through the MSU-IIT admissions portal, submit your high school credentials, and pass the entrance exam to be eligible for any of the engineering programs."
-
-  utter_coe_adreq:
-    - text: "Requirements include passing the university entrance exam and meeting the minimum grade requirements for key subjects like Mathematics and Science. Details are provided in the admission guidelines on the MSU-IIT website."
-
-  utter_coe_duration:
-    - text: "The standard duration for engineering programs is four years. This includes practical and theoretical training to ensure a strong foundation in engineering principles."
-
-  utter_coe_internship:
-    - text: "Yes, internships are an integral part of the curriculum. The college partners with various companies and industries to provide hands-on experience and training for students."
-
-  utter_coe_faci:
-    - text: "The College of Engineering has state-of-the-art facilities, including specialized laboratories for different engineering disciplines, computer rooms, workshops, and access to simulation software."
-
-  utter_coe_special:
-    - text: "Specializations for Mechanical Engineering students include Thermodynamics, Fluid Mechanics, Manufacturing, and Robotics. Students can choose electives depending on their areas of interest."
-
-  utter_coe_orgs:
-    - text: "Yes, there are several student organizations such as the Junior Philippine Society of Mechanical Engineers (JPSME), Institute of Electrical and Electronics Engineers (IEEE) Student Chapter, and others for different engineering disciplines."
-
-  utter_coe_career:
-    - text: "Graduates from COE can pursue careers in various industries such as construction, manufacturing, energy, electronics, software development, research and development, and project management."
-
-  utter_coe_diff:
-    - text: "Electrical Engineering focuses on the generation, distribution, and use of electricity, while Electronics Engineering deals with the design and development of electronic circuits, devices, and communication systems."
-
-  utter_coe_research:
-    - text: "Yes, the College of Engineering actively promotes research, and students can work on research projects with faculty members or initiate their own. The college has research centers dedicated to various fields of engineering."
-
-  utter_coe_elective:
-    - text: "Yes, students can take electives from other colleges, provided that they meet the course prerequisites and there are slots available."
-
-  utter_coe_shift:
-    - text: "Yes, students can apply for a program shift, but they must meet the requirements of the program they wish to transfer into. Approval is subject to the availability of slots and academic standing."
-
-  utter_coe_gradprog:
-    - text: "Yes, the College of Engineering offers graduate programs such as Master of Science in Civil Engineering, Mechanical Engineering, Electrical Engineering, Robotics, Chemical Engineering. Electronics Engineering, and Material Science Engineering."
-
-  utter_coe_assess:
-    - text: "Assessment is conducted through exams, laboratory activities, projects, problem-solving exercises, and practical evaluations to ensure comprehensive learning of both theoretical and practical aspects."
-
-  utter_coe_opportunity:
-    - text: "Yes, MSU-IIT has partnerships with various universities, and students can participate in exchange programs to gain international exposure in engineering education."
-
-  utter_coe_projects:
-    - text: "Civil Engineering students work on projects such as structural design, transportation systems, water resources management, and construction planning. Projects are often done in collaboration with local communities."
-
-  utter_coe_scholarships:
-    - text: "Yes, scholarships are available based on academic performance, financial need, and merit. Various companies and government agencies also provide scholarships for engineering students."
-
-  utter_coe_metacareer:
-    - text: "Metallurgical Engineering deals with the extraction, processing, and development of metals and alloys. Graduates can work in industries such as mining, materials production, research, quality assurance, and consulting."
-
-  utter_coe_faculty:
-    - text: "Faculty members have designated consultation hours, and students can schedule appointments. You can also contact them via email or through the online portal provided by the university."
-
-  utter_coe_mainloc:
-    - text: "The COE building is located on the northeast side of the university, near the rear of the CSM and CHS buildings, and in front of the university gymnasium. It is also the building that houses the FabLab."
-
-  utter_chs_programs:
-    - text: "The College of Health Sciences offers a Bachelor of Science in Nursing (BSN) program, which prepares students for a career in nursing through a combination of theoretical and practical training."
-
-  utter_chs_program_duration:
-    - text: "The BSN program is a four-year course that includes academic classes, laboratory training, and clinical practice in various healthcare settings."
-
-  utter_chs_admission_requirements:
-    - text: "Admission requirements include passing the MSU SASE, submitting high school credentials, and meeting the required grade standards for Science and English subjects. Students are also required to take the medical exam which consists of CBC, Chest X-ray, and Drug Test."
-
-  utter_chs_practical_training:
-    - text: "Nursing students undergo clinical rotations in hospitals, health centers, and community settings to gain hands-on experience in patient care, under the supervision of qualified healthcare professionals."
-
-  utter_chs_career_opportunities:
-    - text: "Graduates can work as registered nurses in hospitals, clinics, health centers, schools, and other healthcare facilities. They can also pursue roles in research, healthcare management, and nursing education."
-
-  utter_chs_scholarships:
-    - text: "Yes, scholarships are available for nursing students based on academic performance, financial need, and merit. The College of Health Sciences also partners with various government and private organizations to provide financial assistance."
-
-  utter_chs_subjects:
-    - text: "The nursing program covers subjects such as Anatomy and Physiology, Pharmacology, Medical-Surgical Nursing, Maternal and Child Health Nursing, Community Health Nursing, and Nursing Leadership to name a few."
-
-  utter_chs_facilities:
-    - text: "The College of Health Sciences has modern simulation laboratories, nursing skills laboratories, and access to clinical practice facilities to provide students with hands-on learning experiences."
-
-  utter_chs_clinical_instructors:
-    - text: "Clinical Instructors supervise students during their clinical rotations, ensuring that they learn proper nursing techniques, adhere to safety protocols, and provide quality patient care."
-
-  utter_chs_board_exam:
-    - text: "Yes, nursing graduates must pass the Nursing Licensure Examination (NLE) administered by the Professional Regulation Commission (PRC) to become registered nurses in the Philippines."
-
-  utter_chs_clinical_practice:
-    - text: "Clinical practice is arranged in partnership with various hospitals and healthcare facilities, where students are assigned specific shifts and duties to gain experience in different nursing specialties."
-
-  utter_chs_specialization:
-    - text: "Yes, after gaining experience as a registered nurse, you can pursue specializations such as Critical Care Nursing, Pediatric Nursing, Oncology Nursing, or become a Nurse Practitioner through further education and training."
-
-  utter_chs_student_organizations:
-    - text: "Yes, the College of Health Sciences has student organizations, which provides opportunities for leadership development, professional networking, and community involvement."
-
-  utter_chs_community_health_nursing:
-    - text: "Community Health Nursing is a field focused on providing healthcare to individuals, families, and communities outside the hospital setting. It is part of the curriculum, and students gain experience through community immersion programs."
-
-  utter_chs_graduate_programs:
-    - text: "Currently, the College of Health Sciences focuses on the undergraduate BSN program. However, graduates can pursue Master’s degrees in Nursing from other institutions that offer advanced nursing education."
-
-  utter_chs_assessment:
-    - text: "Students are assessed through a combination of written exams, practical evaluations, clinical performance assessments, presentations, and research projects to ensure comprehensive knowledge and skill development."
-
-  utter_chs_work_abroad:
-    - text: "Yes, many graduates work abroad after gaining some experience and passing the necessary licensure exams in the country where they wish to work. The BSN program follows international standards, making graduates eligible for foreign opportunities."
-
-  utter_chs_student_projects:
-    - text: "Nursing students work on various projects, including case studies, community health assessments, research papers, and health education campaigns. These projects help develop critical thinking, research skills, and community engagement."
-
-  utter_chs_research_opportunities:
-    - text: "Yes, students can engage in research projects related to healthcare, patient care improvements, and community health. Research is  encouraged as part of the curriculum, especially during the senior year."
-
-  utter_chs_mainloc:
-    - text: "The CHS building is the building located at the northeast side of the university. It is situated behind
-    the CEBA building and beside the COE building. The CHS building is also called as the CET building"
-
-  utter_ceba_programs:
-    - text: "The College of Business Administration and Accountancy offers Bachelor of Science in Accountancy (BSA), Bachelor of Science in Business Administration (BSBA) with majors in Marketing Management, and Business Economics, as well as Bachelor of Science in Hospitality Management (BSHM)."
-
-  utter_ceba_bsa_program:
-    - text: "The BSA program provides education and training in accounting principles, financial reporting, taxation, auditing, and managerial accounting. It prepares students for the CPA (Certified Public Accountant) board examination and careers in accounting."
-
-  utter_ceba_program_duration:
-    - text: "The BSA program is typically completed in four years, including pre-board and board review periods for the CPA licensure exam."
-
-  utter_ceba_career_opportunities_bsba:
-    - text: "Graduates of BSBA can work in various fields, such as financial analysis, marketing management, business consulting, entrepreneurship, banking, sales, and human resources, depending on their chosen major."
-
-  utter_ceba_internships:
-    - text: "Yes, all programs in CEBA include internships to provide practical experience in real-world business environments. Students are assigned to various companies to gain exposure to their chosen field."
-
-  utter_ceba_admission_requirements:
-    - text: "Admission requirements include passing the MSU-IIT entrance exam, meeting grade requirements, submitting high school credentials, and for BS Accountancy, a qualifying examination is needed."
-
-  utter_ceba_bshm_program:
-    - text: "BSHM focuses on training students in the areas of hospitality, hotel management, restaurant management, and tourism. It covers topics such as front office operations, food and beverage management, and customer service."
-
-  utter_ceba_scholarships:
-    - text: "Yes, the college offers scholarships based on academic performance, financial need, and external scholarships from government agencies and private sponsors."
-
-  utter_ceba_facilities:
-    - text: "The college has a simulation lab for hospitality management, a business research center, and access to computer laboratories to support students' learning and practical experiences."
-
-  utter_ceba_difference_bsba_bse:
-    - text: "BSBA focuses on different business disciplines such as marketing and financial management, while BSE focuses specifically on economic theories, market analysis, policy development, and data-driven research in economics."
-
-  utter_ceba_shift_to_accountancy:
-    - text: "Yes, you can shift to the BS Accountancy program, provided you meet the specific grade requirements and there are available slots for transferees."
-
-  utter_ceba_marketing_subjects:
-    - text: "You will study courses like Consumer Behavior, Marketing Strategies, Brand Management, Product Development, Digital Marketing, and Advertising. These courses are designed to prepare you for a career in marketing."
-
-  utter_ceba_student_organizations:
-    - text: "Yes, CEBA has student organizations like the Junior Philippine Institute of Accountants (JPIA) and the Junior Financial Executives (JFINEX), which provide opportunities for leadership, networking, and professional development."
-
-  utter_ceba_prepare_cpa_exam:
-    - text: "The Accountancy program includes a rigorous review period and preparatory board review classes. Students are also encouraged to participate in mock board exams and consult faculty advisors for support."
-
-  utter_ceba_bshm_practical_training:
-    - text: "Practical training includes hands-on experience in hotel and restaurant management, catering, event planning, and internships in hospitality establishments to help students develop industry skills."
-
-  utter_ceba_student_projects_bsba:
-    - text: "BSBA students work on projects like business plans, market research, feasibility studies, financial analysis, and case studies to help them apply theoretical concepts to real-world business scenarios."
-
-  utter_ceba_exchange_programs:
-    - text: "Yes, CEBA students have the opportunity to join exchange programs or study abroad through partnerships with international universities and organizations, providing global exposure and experience."
-
-  utter_ceba_financial_vs_marketing:
-    - text: "Financial Management focuses on corporate finance, investment analysis, and financial planning, while Marketing Management focuses on strategies to promote products and services, market research, and consumer behavior."
-
-  utter_ceba_research_opportunities:
-    - text: "Yes, students are encouraged to engage in research on topics related to business, economics, and accounting. The college has a research center that provides resources and support for student research projects."
-
-  utter_ceba_employment_opportunities_bshm:
-    - text: "Graduates can work as hotel managers, restaurant supervisors, events coordinators, tourism officers, food and beverage managers, or pursue entrepreneurial opportunities in the hospitality industry."
-
-  utter_ceba_mainloc:
-    - text: "The CEBA building is located at the northern part of the university just along the road that leads to 
-      the university gymnasium. It is also near the CASS old building and the CET building."
-
-    
-  utter_cass_programs_offered:
-    - text: "CASS offers the following programs: Bachelor of Arts in English Language Studies, Bachelor of Arts in Filipino, Bachelor of Arts in History, Bachelor of Arts in Political Science, Bachelor of Arts in Sociology, and Bachelor of Science in Psychology."
-
-  utter_cass_career_opportunities:
-    - text: "Graduates from CASS can pursue careers in education, public administration, journalism, research, social work, human resources, law, psychology, and more. The opportunities depend on your field of study."
-
-  utter_cass_admission_requirements:
-    - text: "The basic requirements include passing the university entrance exam, submitting high school credentials, and meeting specific grade criteria for relevant subjects. Details are available on the admissions page of the university website."
-
-  utter_cass_specializations_focus:
-    - text: "Yes, there are areas of focus depending on the specific degree program. For example, BA in English Language Studies focuses on linguistics, communication, and research, while BA in Political Science focuses on governance, political theories, and international relations."
-
-  utter_cass_scholarships:
-    - text: "Yes, there are scholarships available for CASS students based on academic merit, financial need, and other specific qualifications."
-
-  utter_cass_application_process:
-    - text: "You can apply through the university’s online application system by submitting the required documents and passing the entrance examination. More details can be found on the admissions website."
-
-  utter_cass_student_organizations:
-    - text: "Yes, CASS has several student organizations including debate clubs, cultural and arts groups, political science societies, psychology societies, and others that align with student interests."
-
-  utter_cass_internship_opportunities:
-    - text: "Yes, internships are available for specific programs like Psychology and Political Science. These internships help students gain practical experience in their field of study."
-
-  utter_cass_research_opportunities:
-    - text: "CASS encourages students to engage in research activities. You can work with faculty members on research projects or initiate your own projects. The college also has research facilities and publications for students interested in academic research."
-
-  utter_cass_degree_completion_time:
-    - text: "Most programs at CASS are designed to be completed in four years, provided students fulfill the necessary requirements on schedule."
-
-  utter_cass_course_shifting:
-    - text: "Yes, students can apply for a shift to another program within CASS, subject to meeting specific academic requirements and the availability of slots."
-
-  utter_cass_facilities:
-    - text: "CASS has well-equipped facilities including classrooms, a library with extensive resources in arts and social sciences, and access to research labs and audio-visual rooms."
-
-  utter_cass_subjects_ba_history:
-    - text: "BA in History includes subjects like Philippine History, World History, Historical Research Methods, and Historiography. There will be a mix of core history subjects and electives that help broaden your understanding of historical events and perspectives."
-
-  utter_cass_elective_courses:
-    - text: "Yes, students are allowed to take elective courses from other colleges to broaden their learning experience, as long as prerequisites are met and courses are available."
-
-  utter_cass_community_outreach:
-    - text: "Yes, CASS is actively involved in community outreach programs, including projects related to social welfare, literacy campaigns, and cultural enrichment activities, which students can participate in."
-
-  utter_cass_student_assessment:
-    - text: "Students are assessed through a combination of written exams, oral presentations, research papers, projects, and class participation. The assessment method varies based on the course and its requirements."
-
-  utter_cass_distinction_from_other_colleges:
-    - text: "CASS has a unique focus on humanities, social sciences, and cultural studies, emphasizing the development of critical thinking, communication, and a deep understanding of society and human behavior. The faculty’s expertise and the vibrant student organizations also contribute to the dynamic learning environment."
-
-  utter_cass_faculty_qualifications:
-    - text: "Faculty members at CASS hold advanced degrees in their respective fields and have extensive experience in teaching, research, and community engagement. Many are also involved in national and international scholarly activities."
-
-  utter_cass_student_exchange:
-    - text: "Yes, MSU-IIT offers exchange programs through partnerships with international universities. Interested students can inquire at the international relations office to learn more about these opportunities."
-
-  utter_cass_job_prospects_ba_sociology:
-    - text: "BA Sociology graduates can work in various fields such as social research, public policy, community development, human resources, and even corporate roles that require an understanding of human behavior and societal trends."
-
-  utter_cass_mainloc:
-    - text: "The CASS building is located at the northern most part of the university. It is the building beside the 
-    CEBA student lounge. The CASS building consists of the old and new building."
-
-
-  utter_ced_programs_offered:
-    - text: "The College of Education offers Bachelor of Elementary Education (BEEd), Bachelor of Secondary Education (BSEd) with majors in English, Filipino, Science, Mathematics, and Social Studies, and Bachelor of Early Childhood Education. The college also offers a Bachelor of Physical Education program."
-
-  utter_ced_application_process:
-    - text: "You need to apply through the MSU-IIT admissions portal, submit your high school credentials, and pass the entrance examination to be eligible for the programs offered by CED."
-
-  utter_ced_difference_beed_bsed:
-    - text: "BEEd prepares students to teach at the elementary level (Grades 1-6), while BSEd is designed to train future teachers for secondary education (Grades 7-12) with specialization in subjects like English, Mathematics, and Science."
-
-  utter_ced_degree_completion_time:
-    - text: "It generally takes four years to complete an undergraduate degree in CED, including the practicum or student teaching requirement during the final year."
-
-  utter_ced_internship_opportunities:
-    - text: "Yes, all programs include a required practicum or student teaching internship, where students are assigned to local schools to gain practical teaching experience."
-
-  utter_ced_career_opportunities:
-    - text: "Graduates can work as licensed teachers in elementary or secondary schools, as education program specialists, curriculum developers, or continue further studies to become school administrators or education consultants."
-
-  utter_ced_scholarships:
-    - text: "Yes, CED offers scholarships based on academic performance, financial need, and other qualifications. Government and private institutions also offer scholarships specifically for aspiring educators."
-
-  utter_ced_subjects_bsed_mathematics:
-    - text: "The BSEd Mathematics program includes subjects like Calculus, Linear Algebra, Statistics, Geometry, and teaching methodologies for Mathematics at the secondary level."
-
-  utter_ced_elective_courses:
-    - text: "Yes, CED students can take electives from other colleges, provided that they meet the prerequisites and there are available slots for the chosen courses."
-
-  utter_ced_student_teaching_requirement:
-    - text: "Student teaching is a practicum course required for all education majors. It involves a full semester of teaching in a partner school under the guidance of a cooperating teacher and supervision by CED faculty."
-
-  utter_ced_student_organizations:
-    - text: "Yes, CED has several student organizations such as the Student Council for Education Majors, Math Circle, English Education Society, and other clubs that provide opportunities for professional development and camaraderie among education students."
-
-  utter_ced_graduate_programs:
-    - text: "Yes, CED offers graduate programs such as the Master of Arts in Education (MAEd) and Master of Arts in Teaching (MAT) with various majors."
-
-  utter_ced_student_assessment:
-    - text: "Students are assessed through a combination of written exams, lesson planning, classroom teaching demonstrations, research projects, and class participation to ensure comprehensive learning in both theory and practice."
-
-  utter_ced_facilities:
-    - text: "The College of Education has well-equipped classrooms, laboratories for science and technology courses, a micro-teaching laboratory, and access to audio-visual rooms and a resource center."
-
-  utter_ced_course_shifting:
-    - text: "Yes, students can shift to another major within CED if they meet the specific requirements and there are available slots for the new major."
-
-  utter_ced_research_opportunities:
-    - text: "Yes, CED encourages students to engage in research, especially on topics related to education innovations, pedagogy, and school management. Students may also work with faculty members on research projects."
-
-  utter_ced_specializations_sped:
-    - text: "Yes, CED offers courses related to Special Education, and students can pursue this track to specialize in teaching children with special needs."
-
-  utter_ced_job_prospects_early_childhood:
-    - text: "Graduates of Early Childhood Education can work as preschool or kindergarten teachers, child development specialists, education coordinators, or work in daycare centers and private educational institutions."
-
-  utter_ced_bachelor_physical_education:
-    - text: "The Bachelor of Physical Education program prepares students to teach Physical Education in schools, organize sports events, coach athletic teams, and promote physical fitness and wellness."
-
-  utter_ced_exchange_programs:
-    - text: "Yes, CED has partnerships with universities abroad, and education students can participate in exchange programs or undergo training abroad for additional exposure and experience in international educational settings."
-
-  utter_ced_mainloc:
-    - text: "The CED building is located at the northeast side of the university"
-
-  utter_csm_programs_offered:
-    - text: "The College of Science and Mathematics offers undergraduate programs in Biology, Chemistry, Mathematics, Physics, Marine Biology, and Statistics. There are also graduate programs, including Master’s and Doctoral degrees in various science disciplines."
-
-  utter_csm_application_process:
-    - text: "You need to apply through the MSU-IIT admissions portal, pass the entrance examination, and meet the requirements for the specific program you want to pursue."
-
-  utter_csm_career_opportunities:
-    - text: "Graduates can work as researchers, laboratory technicians, environmental scientists, educators, data analysts, or pursue advanced studies in fields like medicine, research, and industry."
-
-  utter_csm_scholarships:
-    - text: "Yes, scholarships are available based on academic performance, financial need, and other qualifications. The College of Science and Mathematics also collaborates with various institutions to provide scholarships for deserving students."
-
-  utter_csm_difference_bs_biology_marine_biology:
-    - text: "BS Biology is a general study of living organisms, while BS Marine Biology focuses specifically on marine life, ecosystems, and aquatic environments."
-
-  utter_csm_facilities:
-    - text: "The College of Science and Mathematics has well-equipped laboratories for Biology, Chemistry, Physics, and Marine Biology, as well as a library offering academic resources to assist your studies."
-
-  utter_csm_undergraduate_research_opportunities:
-    - text: "Yes, students are encouraged to participate in research projects as part of their coursework or as extra-curricular activities. They work with faculty members on research topics relevant to their fields."
-
-  utter_csm_degree_completion_time:
-    - text: "Most undergraduate programs in CSM are completed in four years, depending on the student’s pace and the number of units taken per semester."
-
-  utter_csm_course_shifting:
-    - text: "Yes, students can shift to another program within CSM if they meet the requirements and there are available slots in the desired program."
-
-  utter_csm_student_organizations:
-    - text: "Yes, CSM has several student organizations, such as the SMAS (Statistics & Mathematics Society), Haynayan Society, Chemistry Society, KMP (Kapisanan ng Mag-aaral sa Pisika), and MASSTS (Marine Science Student Society), which provide opportunities for academic support and social engagement."
-
-  utter_csm_graduate_programs:
-    - text: "Yes, CSM offers Master’s and Doctoral degrees in disciplines like Biology, Marine Biology, Chemistry, Mathematics, Statistics, and Physics, providing opportunities for further specialization and research."
-
-  utter_csm_internship_opportunities:
-    - text: "Yes, some programs include internships as part of the curriculum, allowing students to gain practical experience in industry, government, or research institutions."
-
-  utter_csm_student_projects:
-    - text: "Students work on laboratory experiments, fieldwork, research projects, data analysis, and group projects related to their specific field of study. These projects help them apply theoretical concepts to real-world situations."
-
-  utter_csm_work_abroad_opportunities:
-    - text: "Yes, CSM graduates can work abroad after gaining relevant experience and meeting the requirements of the country they wish to work in. Many CSM graduates pursue further studies or employment in research, education, and industry overseas."
-
-  utter_csm_student_assessment:
-    - text: "Students are assessed through a combination of written exams, laboratory reports, research projects, oral presentations, and practical exams to ensure comprehensive learning and skill development."
-
-  utter_csm_fieldwork_opportunities:
-    - text: "Yes, both Marine Biology and Biology programs include fieldwork, allowing students to study ecosystems, conduct surveys, and gain hands-on experience in their area of specialization."
-
-  utter_csm_bachelor_science_mathematics:
-    - text: "BS Mathematics covers a wide range of topics, including calculus, algebra, statistics, and differential equations. It prepares students for careers in education, research, data analysis, and other fields that require strong analytical skills."
-
-  utter_csm_get_involved_research:
-    - text: "Students can get involved in research by joining research projects led by faculty members, applying for research grants, or participating in conferences and symposia hosted by the college."
-
-  utter_csm_exchange_programs:
-    - text: "Yes, CSM has partnerships with international universities and research institutions, offering students opportunities for exchange programs, internships, and training abroad."
-
-  utter_csm_mainloc:
-    - text: "The CSM building is located at the eastern side of the university. It is one of the oldest buildings in 
-    the campus."
-
-  utter_fab_lab_about:
-    - text: " FAB LAB stands for Fabrication Laboratory, which is equipped with various digital fabrication technologies such as 3D printers, laser cutters, CNC millers, and other electronic equipment. It is a space for creative minds who want to transform their ideas into reality."
-
-  utter_fab_lab_use:
-    - text: "FAB LAB is open to all individuals, whether from inside or outside of MSU-IIT, who are interested in hands-on fabrication and prototyping."
-
-  utter_fab_lab_make:
-    - text: " FAB LAB is a space where you can make almost anything. You can create a wide range of objects, including project prototypes, artworks, custom-designed products, assemblies, and more."
-
-  utter_fab_lab_access:
-    - text: "You can click the Book Now button and select the services you want to avail of using our Facebook page. Take note that you can only visit the laboratory once the appointment has been approved."
-
-  utter_fab_lab_cost:
-    - text: "Depending on the type of machines an individual wants to use. You can check our rates on the Book Now button on our Facebook page."
-
-  utter_admission_about:
-    - text: "Admissions or OASG is the office in charge of the admission process in msuiit"
-
-  utter_admission_inv:
-    - text: "Once, the Top 20% abosorptive requirement is completed, the next 70% capacity will then be invited"
-
-  utter_admission_docs:
-    - text: "The student should know if there is a problem with the submitted requirements because, there is a checklist. After some period, some students  will be called by OASG staff regarding the requirements if it is still lacking. Those who cannot submit the original grade 12 report card, will forfeit their slot after some period. While other documents will be tagged as liability."
-
-  utter_admission_chance:
-    - text: "It depends on the rank and availability of slots."
-
-  utter_admission_email:
-    - text: "No, regular freshmen admission is only during the first semester of every academic year."
-
-  utter_admission_transfer:
-    - text: "Yes, but only the department can identify if there is a available slot per program.Once program slot is available, the Program Slot Availability Certification and Student Qualification (PSACSQ) must be signed by the adviser, chairman, and dean of the college. Then the applicant must submit the required documents to the Office of the University Registrar, then proceed to OASG for advising."
-
-  utter_admission_transout:
-    - text: "Admissions to any unit of the MSU System requires passing the SASE. So, if the student was not able to take the previous SASE, he/she must take the CET either in MSU-Marawi or in MSU-Naawan if he/she has a notice of acceptance from the Department."
-
-  utter_admission_secdegree:
-    - text: "The student who wish to enroll should go to the Department they prefer for evaluation of records. If accepted by the Department, the student will be given a Program Slot Availability Certification and Student Qualification (PSACSQ) form that must be signed by the adviser, chairman, and dean of the college."
-
-  utter_admission_lackdoc:
-    - text: "All the freshmen documents are submitted and kept by the University Registrar."
-
-  utter_admission_liability:
-    - text: "The student's liability on their My.IIT account will be cleared depending on the remarks given. The student should comply with the remarks given, after compliance, by then, the office can settle the liability of the student through Clearance system."
-
-  utter_scholar_avail:
-    - text: "Announcement of available scholarships will be posted on the official Facebook page of the office, MSU-IIT Office of Admissions, Scholarships and Grants."
-
-  utter_scholar_delay:
-    - text: "If the student has an existing scholarship, then the student will not receive incentives for the Unified Scholarship as per BOR approved policy. If no other scholarship, then OASG will verify if the name of the student is on the list of scholars sent by the respective Department."
-
-  utter_scholar_lbpopen:
-    - text: "A Landbank DOBS payroll account link and QR is available at the OASG. The student needs to fill this out. After the application is completed the assigned OASG staff will approve their online application. Then the student will receive a notification from Landbank that they can now access the Landbank Mobile banking app toview their account details."
-
-  utter_scholar_lbpcert:
-    - text: "The OASG will issue an Assessment slip so the requestor can pay Certification fee of P50.00 at the Cashier's Office before we issue the Certificate."
-
-  utter_scholar_lbpsubmit:
-    - text: "The student should submit LBP account number in the OASG through walk-in or online submission via email. Once the OASG staff receives the LBP account number, they will clear the liability through MSU-IIT Online Clearance System."
-
-  utter_scholar_apply:
-    - text: "The data of all officially enrolled undergraduate students will be submitted in the UniFAST Online Portal by MSU-IIT through the Office of Admissions, Scholarships, and Grants whenever we recieved memo from UniFAST to upload in the online portal. The list of students found in the Listahan 3.0 of DSWD will be compared to the list from OASG by the CHED through assessment. Once the CHED has completed the qualfiied students, the list will be forwarded back to the University. By then, the OASG will inform qualified students of the grant to submit documentary requirements."
-
-  utter_scholar_tag:
-    - text: "An MSU employee should submit a Permit to study and certificate of employment while ANTEU and FU members of MSU-IIT should submit a certificate  of membership of the union."
-
-  utter_clinic_checkup:
-    - text: "Yes, all services from the clinic are free"
-
-  utter_clinic_dental:
-    - text: "Consultation and Tooth Extractions only. Bring your COR for tooth extraction appointment."
-
-  utter_clinic_medcert_absent:
-    - text: "Get the format of the excuse letter then clinic staffs will countersigned the letter."
-
-  utter_clinic_medcert_travel:
-    - text: "You need endorsement letter addressing Dr. Muhammad Puting"
-
-  utter_clinic_labtest:
-    - text: "I. Hematology
-            II. Urinalysis
-            III. FBS
-            IV. RBS
-            V. Lipid Profile
-            VI. Creatinine
-            VII. Blood Uric Acid (BUA)
-            VIII. Blood Urea Nitrogen (BUN)
-            IX. SGPT
-            X. SGOT
-            VI. Blood Typing"
-
-  utter_clinic_medcert_employment:
-    - text: "First is you have to undergo basic tests ( CBC, Urinalysis, Drug test, X-ray) and submit the original laboratory results in the Clinic, together with the Medical Certificate CS 221 Revised 2018"
-
-  utter_clinic_fasting:
-    - text: "FBS: 6-8 hours
-            Lipid Profile: 10-12 hours
-            Both FBS and Lipid Profile: 10-12 hours"
-
-  utter_registrar_transcript_request:
-    - text: "To request a transcript of records, fill out the relevant form and pay Php 50.00 per page. The processing time is approximately three working days."
-
-  utter_registrar_cor_request:
-    - text: "A Certificate of Registration can be requested for Php 20.00 and will be processed within one day."
-
-  utter_registrar_academic_load_revision:
-    - text: "Complete the Academic Load Revision Permit, follow the outlined process, and submit it to the Registrar’s Office."
-
-  utter_registrar_grade_completion:
-    - text: "To complete a grade, download and fill out the Grade Completion Form and follow the submission process."
-
-  utter_registrar_withdraw_subject:
-    - text: "For subject withdrawal, fill out the Academic Load Revision Permit, attach the required documents, and submit it to the Registrar’s Office."
-
-  utter_registrar_withdraw_all_subjects:
-    - text: "To withdraw from all subjects, submit a letter explaining your reasons, along with a copy of your Certificate of Registration, to the Registrar's Office."
-
-  utter_registrar_add_subjects:
-    - text: "For adding subjects, secure professor signatures, have tuition reassessed, and submit the necessary forms."
-
-  utter_registrar_honorable_dismissal:
-    - text: "You may request an honorable dismissal through the Registrar’s Office, with a processing time of approximately three working days."
-
-  utter_registrar_document_authentication_fee:
-    - text: "Document authentication costs Php 10.00 per page and will be processed within one day."
-
-  utter_registrar_transfer_credentials:
-    - text: "Transfer credentials can be requested for Php 150.00 and take approximately three working days to process."
-
-  utter_registrar_cav_request:
-    - text: "A Certificate of Authentication and Verification (CAV) can be requested for Php 350.00, with a three-day processing time."
-
-  utter_registrar_clearance_access:
-    - text: "To access your clearance online, log in to My.IIT and click on the 'Clearance' link to check if you need to settle any accountabilities."
-
-  utter_registrar_subject_availability:
-    - text: "Use the course offering facility online to inquire about available slots in real-time during enrollment."
-
-  utter_registrar_removal_exams:
-    - text: "For removal exams, download and submit the Removal Examination Form, following the grade submission process."
-
-  utter_registrar_cross_enrollment_permit:
-    - text: "To apply for cross-enrollment, fill out the Permit to Cross-Enroll form and submit it to the Registrar’s Office for approval."
-
-  utter_registrar_academic_calendar:
-    - text: "The academic calendar is available online, where it can be viewed or downloaded."
-
-  utter_registrar_leave_of_absence:
-    - text: "To apply for a leave of absence (LOA), download and submit the LOA form to the Registrar’s Office."
-
-  utter_registrar_reprint_rog:
-    - text: "To reprint the Report of Grades (ROG), request it for Php 20.00, and it will be processed in one day."
-
-  utter_registrar_academic_verification_documents:
-    - text: "Academic records like transcripts and certificates are used for verification and are confidential."
-
-  utter_registrar_check_grades:
-    - text: "Grades can be viewed online via My.IIT after professors have officially submitted them."
-
-  utter_registrar_accountability:
-    - text: "To clear an accountability, visit the office concerned before proceeding with any further enrollment processes."
-
-  utter_registrar_document_processing_time:
-    - text: "Document processing times vary. Certifications take 2 working days, and transcripts take 3 working days."
-
-  utter_registrar_preliminary_registration_form:
-    - text: "The Preliminary Registration Form can be downloaded from the Registrar's Downloads page."
-
-  utter_registrar_advance_credit:
-    - text: "To apply for advance credit, fill out the relevant form and submit it to the Registrar’s Office."
-
-  utter_registrar_student_records_online:
-    - text: "Student records, such as grades and clearances, can be accessed through My.IIT."
-
-  utter_registrar_deans_list:
-    - text: "High academic achievers are included on the Dean’s List, which is published each semester."
-
-  utter_registrar_graduating_students_list:
-    - text: "The tentative list of graduating students is available online."
-
-  utter_registrar_promissory_note:
-    - text: "For a promissory note, download and submit the form to the appropriate office."
-
-  utter_registrar_cross_enrollment_requirements:
-    - text: "To cross-enroll in another institution, submit a Permit to Cross-Enroll form to the Registrar’s Office for approval."
-
-  utter_registrar_transcript_fee:
-    - text: "The fee for a transcript of records is Php 50.00 per page."
-
-  utter_registrar_academic_records_email:
-    - text: "Academic records cannot be requested or released via email; submit a formal request to the Registrar’s Office."
-
-  utter_registrar_student_records_validation_fee:
-    - text: "The validation request fee for student records is Php 50.00."
-
-  utter_registrar_shifter_status:
-    - text: "For shifter status, complete and submit the Shifters Application Form to the Registrar’s Office."
-
-  utter_registrar_enrollment_with_pending_accountabilities:
-    - text: "Students must clear all accountabilities before enrolling."
-
-  utter_registrar_unclaimed_documents:
-    - text: "Unclaimed documents are shredded after three months due to limited storage space."
-
-  utter_registrar_university_schedule:
-    - text: "The University Schedule of Activities can be downloaded online."
-
-  utter_registrar_honorable_dismissal_documents:
-    - text: "Honorable dismissal documents can be requested from the Registrar’s Office following standard procedures."
-
-  utter_registrar_academic_load_revision_form:
-    - text: "The academic load revision form is available online."
-
-  utter_registrar_graduation_qualification:
-    - text: "The tentative list of graduating students is online, or you can inquire with the Registrar's Office."
-
-  utter_registrar_form_137_138_request:
-    - text: "Form 137-A or Form 138 can be requested by filling out the relevant form from the Registrar’s Office."
-
-  utter_osds_apply_student_loan:
-    - text: "Any bona fide MSU-IIT student, with no outstanding accounts, may apply for a student loan. The loan is available for educational expenses such as tuition, books, and school supplies. The loan has a 1% interest rate per month, with a maximum amount of Php 1,000."
-
-  utter_osds_financial_assistance_programs:
-    - text: "Financial assistance is available through several programs such as the Student Loan Program, Student Assistantship, Teaching Assistantship, and the Special Program for Employment of Students (SPES). These are designed to help poor but deserving students support their education."
-
-  utter_osds_qualifications_student_assistantship:
-    - text: "To qualify for the Student Assistantship Program, students must have completed at least one semester, carry a minimum of 12 units, have no failing grades in the previous semester, and possess no record of misconduct. Assistants can work up to 100 hours per month with an hourly rate of P10.00."
-
-  utter_osds_apply_teaching_assistantship:
-    - text: "The Teaching Assistantship Program supports large classes by hiring junior or graduating students to assist professors. Applicants must carry a normal academic load, have passed all subjects, and have no grade lower than 2.5 in major subjects. Compensation is P15.00 per hour for a maximum of 100 hours per month."
-
-  utter_osds_find_approved_student_lodging:
-    - text: "The Office assists students, especially freshmen, in finding suitable lodging. A directory of accredited lodging houses and dormitories is available, providing details on rent, capacity, and facilities."
-
-  utter_osds_requirements_special_grants_program:
-    - text: "Students must maintain a GPA of 2.75 or better and carry a minimum load of 12 units. Special grantees receive a monthly allowance and exemption from upgraded tuition and miscellaneous fees."
-
-  utter_osds_participate_student_organizations:
-    - text: "MSU-IIT recognizes various student organizations, including academic, cultural, and sports-related groups. Students can join any of the 45 recognized organizations after meeting the membership criteria and following the approved guidelines."
-
-  utter_osds_special_program_employment_students:
-    - text: "SPES offers summer employment for poor but deserving students in collaboration with the Department of Labor and Employment (DOLE). Students are paid the minimum wage, with 60% paid by the Institute and 40% by DOLE."
-
-  utter_osds_submit_complaint_suggestion:
-    - text: "Students can submit complaints, petitions, suggestions, or recommendations directly to the Office of Student Development Services. These submissions will be reviewed and acted upon to improve the student experience."
-
-  utter_osds_process_organizing_extra_curricular:
-    - text: "Student organizations must submit their extra-curricular activity proposals for approval. Activities are categorized as co-curricular or extra-curricular, and only approved events are allowed to be held on campus."
-
-  utter_osds_apply_office_assistantship:
-    - text: "To apply, students must be juniors or graduating, carry at least 12 academic units, and have no failing grades or misconduct records. Office assistants work in specific departments, assisting with tasks such as filing and using computers, and are paid P15.00 per hour for a maximum of 100 hours per month."
-
-  utter_osds_benefits_special_grants_program:
-    - text: "Special grantees receive a monthly allowance of Php 400.00 and exemptions from upgraded tuition, miscellaneous, and laboratory fees. In return, they must maintain a GPA of 2.75 or better and carry a minimum of 12 academic units."
-
-  utter_osds_financial_difficulties_tuition:
-    - text: "Students experiencing financial difficulties can apply for the Student Loan Program or consider applying for a Student Assistantship or Office Assistantship, which allows them to work part-time on campus."
-
-  utter_osds_qualify_special_program_employment_students:
-    - text: "SPES is available to poor but deserving students who wish to work during the summer months. Applicants must pass all their subjects and meet the financial eligibility requirements set by the Department of Labor and Employment (DOLE)."
-
-  utter_osds_approved_extracurricular_activities:
-    - text: "Approved activities include academic forums, cultural events like literary programs and plays, sports activities, and observation trips that enhance personal and national development. Proposals for these events must be submitted to and approved by the OSDS."
-
-  utter_osds_restrictions_student_organizations:
-    - text: "MSU-IIT does not recognize Greek-letter fraternities or sororities, nor organizations that engage in hazing. Sectarian or regionalist organizations that could promote division among students are also not allowed."
-
-  utter_osds_file_complaint_student_discipline:
-    - text: "Complaints related to student discipline can be submitted directly to the OSDS. The office manages and oversees student discipline and ensures that the Institute’s policies are followed."
-
-  utter_osds_requirements_personal_appliances_dormitories:
-    - text: "There are standardized monthly charges for personal appliances in dormitories, such as P200 for a flat iron, P100 for a table fan, and P300 for a water heater. These charges are added to the student’s monthly rent."
-
-  utter_osds_student_petitions_process:
-    - text: "The OSDS serves as a channel for student petitions, suggestions, and complaints. They review submissions and act to address concerns or improve student services."
-
-  utter_osds_run_for_student_council:
-    - text: "To run for a position in the KASAMA (College Student Council), students must meet the requirements set out in the council’s constitution, such as being enrolled as a student of the Institute and being in good academic standing."
-
-  utter_osds_find_scholarships:
-    - text: "Scholarships are available for students excelling in the arts, such as dance, theater, choral singing, and band. Each has different GPA requirements (2.75 or better), and students can apply through the OSDS."
-
-  utter_osds_max_hours_student_assistantship:
-    - text: "Student assistants are allowed to work a maximum of 100 hours per month. They earn P10.00 per hour and are exempt from paying upgraded tuition fees and some miscellaneous fees."
-
-  utter_osds_apply_multiple_financial_aid:
-    - text: "Yes, students may apply for more than one financial aid program, such as a combination of student loans, assistantships, and scholarships, as long as they meet the requirements for each."
-
-  utter_osds_help_finding_housing:
-    - text: "The OSDS maintains a directory of accredited lodging houses and dormitories, particularly for freshmen. You can contact the office for assistance in finding suitable housing."
-
-  utter_osds_renew_student_loan:
-    - text: "To renew your student loan, you must ensure that you have no outstanding balances. Once cleared, you can apply for a new loan, which will have the same terms (1% interest per month, maximum Php 1,000)."
-
-  utter_osds_guidance_counseling_center_role:
-    - text: "The OSDS oversees the Guidance and Counseling Center, which provides services to help students with academic, personal, and emotional challenges. They offer counseling and workshops on personal development."
-
-  utter_osds_summer_programs:
-    - text: "Yes, the Special Program for Employment of Students (SPES) provides summer employment for students in coordination with DOLE. Students work during April and May and are paid the minimum wage."
-
-  utter_osds_student_elections_rules:
-    - text: "Student elections, including those for the KASAMA (College Student Council), are conducted annually. The elections are overseen by the OSDS, and only students in good standing are eligible to run for office or vote."
-
-  utter_osds_help_organizing_cultural_events:
-    - text: "Yes, the OSDS supports cultural activities like theater performances, choral singing, and art exhibitions. Proposals for such events should be submitted to the office for approval and assistance."
-
-  utter_osds_involved_student_publication:
-    - text: "Students interested in journalism can join “Silahis,” the official student publication. You can apply through the student affairs office, and members typically meet to produce content at least once a month."
-
-  utter_osds_academic_advising_career_counseling:
-    - text: "The OSDS works closely with the Guidance and Counseling Center, where students can receive academic advising, career counseling, and personal development services. You can schedule an appointment with a counselor at any time."
-
-  utter_osds_student_organization_advisers:
-    - text: "Advisers for student organizations are recommended by the students in coordination with the Director of Student Affairs. They must be approved by the President/Chancellor before assuming their role."
-
-  utter_osds_apply_scholarship:
-    - text: "Students can apply for scholarships such as the Special Grants for Dance, Theater, Choral, or Band by maintaining a GPA of 2.75 or higher. Scholarship forms are available at the OSDS, and applicants must provide supporting documents like their grades."
-
-  utter_osds_missing_student_id:
-    - text: "If you miss a payment deadline, it’s important to contact the OSDS immediately. Penalties may apply, and failure to pay could result in ineligibility for future loans until the balance is settled."
-
-  utter_osds_find_upcoming_activities:
-    - text: "Information about upcoming student activities is regularly posted on bulletin boards around campus and through official University channels. The OSDS also provides updates on approved extracurricular and co-curricular activities."
-
-  utter_osds_penalties_non_participation_extracurricular:
-    - text: "Participation in extracurricular activities is generally voluntary; however, there may be some academic programs or scholarship requirements that encourage participation. Non-participation does not typically result in penalties unless stipulated in specific course requirements."
-
-  utter_osds_volunteer_campus_events:
-    - text: "Students interested in volunteering for campus events can sign up through the OSDS. There are often opportunities to assist with cultural events, student elections, and academic forums. Volunteering may also count toward extra-curricular credits, depending on the event."
-
+  - text: "I notice we've moved from {last_topic} to {active_topic}. What specifically would you like to know about {active_topic}?"
 
 actions:
   - action_set_active_college
@@ -2001,6 +1036,11 @@ actions:
   - action_handle_program_comparison
   - action_track_student_interest
   - action_handle_multiple_questions
+  - action_handle_facility_access
+  - action_validate_program_requirements
+  - action_track_location_context
+  - action_handle_program_difficulty
+  - action_manage_student_preferences
 
 session_config:
   session_expiration_time: 60

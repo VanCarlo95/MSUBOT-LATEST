@@ -3,14 +3,14 @@
 # Server where the models are pulled from.
 # https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
 
-#models:
+# models:
 #  url: http://my-server.com/models/default_core@latest
 #  wait_time_between_pulls:  10   # [optional](default: 100)
 
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 
-#action_endpoint:
+# action_endpoint:
 #  url: "http://localhost:5055/webhook"
 
 # Tracker store which is used to store the conversations.
@@ -40,3 +40,25 @@
 #  username: username
 #  password: password
 #  queue: queue
+
+
+
+
+
+
+# Configure CORS settings
+# cors:
+#   origins:
+#     - "*"
+#     - "null"
+#     - "file://"
+#     - "http://localhost:8000"
+#     - "http://127.0.0.1:8000"
+#   methods:
+#     - GET
+#     - POST
+#     - OPTIONS
+#   headers:
+#     - Content-Type
+#     - Accept
+#   max_age: 3600
